@@ -37,8 +37,8 @@ session_start();
 </FORM>
 </div>
 
- <br><hr>
-	 
+<br><hr>
+
 <a href="cliente.html"> <img src="../img/retornar.png" width="20" height="20">  </a>
 
 

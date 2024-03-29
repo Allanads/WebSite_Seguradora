@@ -1,4 +1,3 @@
-?>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -26,7 +25,7 @@
     <br>
     <br>
 
-    <img src="../img/img2.png" title="login"> <br>
+    <img src="../img/img2.png" title="Cadastro"> <br>
 
     <a href="usu_cad.php"><button style="background: #069cc2; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 10px;">INCLUIR </button></a>
 

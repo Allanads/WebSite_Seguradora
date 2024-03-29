@@ -29,9 +29,9 @@ include_once("../conexao.php");
 		}
 
 		$result_cliente="SELECT cod,nome,cpf,rg,tel from e1_cliente";
-		$resultado = mysqli_query($conn,$result_cliente);
+		$resultado_cliente = mysqli_query($conn,$result_cliente);
 
-	while($row_cliente = mysqli_fetch_assoc($resultado)){
+	while($row_cliente = mysqli_fetch_assoc($resultado_cliente)){
 	echo "Código.....: ".$row_cliente['cod']."<br>";
 	echo "Nome.......: ".$row_cliente['nome']."<br>";
 	echo "CPF........: ".$row_cliente['cpf']."<br>";

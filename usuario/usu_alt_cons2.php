@@ -28,11 +28,11 @@ include_once("../conexao1.php");
 $email = filter_input(INPUT_POST,'email',FILTER_SANITIZE_STRING);
 $result_usuario = "SELECT id,nome,email,senha FROM usuario WHERE email=$email";
 $resultado_usuario = mysqli_query($conne, $result_usuario);
-$row_usuario;
+$row_usuario = mysqli_fetch_assoc($resultado_usuario);
 ?>
 <form method="POST" name="alterar_usuario" action="usu_alt_atualiza.php">
 <?php
-if ($row_usuario = mysqli_fetch_assoc($resultado_usuario)) {
+if ($row_usuario) {
 
 			
 	        echo "CONSTA NA NOSSA BASE DE DADOS O USUÁRIO:<BR>";

@@ -17,7 +17,7 @@ include_once("../conexao.php");
 	<br>
 	<h2 class="titulo" align="center">ACIDENTES NÃO ACONTECEM POR ACASO, MAS POR DESCASO!!!!</h2>
 	<br>
-	<h2 class="titulo" align="center">CONSULTA DE CLIENTES POR CODIGO</h2>
+	<h2 class="titulo" align="center">CONSULTA DE CLIENTES POR CÓDIGO</h2>
 
 </header>
 <div style="text-align: left;">
@@ -26,9 +26,9 @@ include_once("../conexao.php");
 
 $cod = filter_input(INPUT_POST,'cod',FILTER_SANITIZE_NUMBER_INT);
 $result_cliente = "SELECT cod,nome,cpf,rg,tel FROM e1_cliente WHERE cod=$cod";
-$resultado = mysqli_query($conn, $result_cliente);
+$resultado_cliente = mysqli_query($conn, $result_cliente);
 
-if ($row_cliente = mysqli_fetch_assoc($resultado)) {
+if ($row_cliente = mysqli_fetch_assoc($resultado_cliente)) {
 	echo"Código.....:".$row_cliente['cod']."<br>";
 	echo"Nome.......:".$row_cliente['nome']."<br>";
 	echo"CPF........:".$row_cliente['cpf']."<br>";

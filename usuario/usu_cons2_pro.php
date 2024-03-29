@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("../conexao.php");
+include_once("../conexao1.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,22 +24,21 @@ include_once("../conexao.php");
 <hr>
 <?php
 
-$cod = filter_input(INPUT_POST,'cod',FILTER_SANITIZE_NUMBER_INT);
-$result_cliente = "SELECT cod,nome,cpf,rg,tel FROM e1_cliente WHERE cod=$cod";
-$resultado = mysqli_query($conn, $result_cliente);
+$id = filter_input(INPUT_POST,'id',FILTER_SANITIZE_NUMBER_INT);
+$result_usuario = "SELECT id,nome,email,senha FROM usuario WHERE id=$id";
+$resultado_usuario = mysqli_query($conne, $result_usuario);
 
-if ($row_cliente = mysqli_fetch_assoc($resultado)) {
-	echo"Código.....:".$row_cliente['cod']."<br>";
-	echo"Nome.......:".$row_cliente['nome']."<br>";
-	echo"CPF........:".$row_cliente['cpf']."<br>";
-	echo"RG.........:".$row_cliente['rg']."<br>";	
-	echo"Telefone...:".$row_cliente['tel']."<br>";
+if ($row_usuario = mysqli_fetch_assoc($resultado_usuario)) {
+	echo"id.....:".$row_usuario['id']."<br>";
+	echo"Nome.......:".$row_usuario['nome']."<br>";
+	echo"email........:".$row_usuario['email']."<br>";
+	echo"senha.........:".$row_usuario['senha']."<br>";	
 }else{
-	echo "Cliente não existe!!!!";
+	echo "Usuàrio não existe!!!!";
 }
 ?>
 </div>
-<a href="cliente.html"><hr>
+<a href="homecadastrousuario.php"><hr>
  <img src="../img/retornar.png" width="20" height="20">  </a>
 
 <br>

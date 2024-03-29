@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+session_start();
 ?>
 <!DOCTYPE html>
 <html>
@@ -19,7 +19,8 @@ session_start();
 	<h2 class="titulo" align="center">INCLUSÃO DE CLIENTES</h2>
 
 </header>
- 
+</h1>
+<hr>
 <br>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

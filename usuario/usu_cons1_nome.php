@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("../conexao.php")
+include_once("../conexao1.php")
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,9 +23,9 @@ include_once("../conexao.php")
 </header>
 
 <div class="form-container">
-	<form method="POST" action="cli_cons2_pro_nome.php">
+	<form method="POST" action="usu_cons2_pro_nome.php">
 		<label> NOME: </label>
-		<input type="text" name="nome" placeholder="Digite o nome do cliente">
+		<input type="text" name="nome" placeholder="Digite o nome do Usuário">
 		<input type="submit" name="Consultar">
 	</form>
 	<br>
@@ -33,7 +33,7 @@ include_once("../conexao.php")
  
  </div>
  <div class="form-container">
-	<form method="POST" action="cli_consx.php">
+	<form method="POST" action="usu_consx.php">
 		<label> Pesquisa todos registros: </label>
 		<input type="submit" name="Consultar">
 
@@ -42,7 +42,7 @@ include_once("../conexao.php")
 
 <br><br><hr>
 	 
-<a href="cliente.html"> <img src="../img/retornar.png" width="20" height="20">  </a>
+<a href="homecadastrousuario.php"> <img src="../img/retornar.png" width="20" height="20">  </a>
 
 
 </body>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("../conexao.php")
+include_once("../conexao1.php")
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,16 +17,16 @@ include_once("../conexao.php")
 	<br>
 	<h2 class="titulo" align="center">ACIDENTES NÃO ACONTECEM POR ACASO, MAS POR DESCASO!!!!</h2>
 	<br>
-	<h2 class="titulo" align="center">CONSULTA DE CLIENTES</h2>
+	<h2 class="titulo" align="center">CONSULTA DE USUÁRIO</h2>
 
 </header>
 <hr>
 <br>
 
 <div class="form-container">
-	<form method="POST" action="cli_cons2_pro.php">
-		<label> CÓDIGO: </label>
-		<input type="number"  required name="cod" placeholder="Digite o código do cliente">
+	<form method="POST" action="usu_cons2_pro.php">
+		<label> E-MAIL: </label>
+		<input type="text"  required name="email" placeholder="Digite o e-mail do usuário">
 		<input type="submit" name="Consultar">
 	</form>
 	<br>
@@ -36,7 +36,7 @@ include_once("../conexao.php")
 
  </div>
  <div class="form-container">
-	<form method="POST" action="cli_consx.php">
+	<form method="POST" action="usu_consx.php">
 		<label> Pesquisa todos registros: </label>
 		<input type="submit" name="Consultar">
 
@@ -47,7 +47,7 @@ include_once("../conexao.php")
 <br>
 <hr>
 	 
-<a href="cliente.html"> <img src="../img/retornar.png" width="20" height="20">  </a>
+<a href="homecadastrousuario.php"> <img src="../img/retornar.png" width="20" height="20">  </a>
 
 <br>
 <br>

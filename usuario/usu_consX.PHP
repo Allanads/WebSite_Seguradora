@@ -1,6 +1,6 @@
 ﻿<?php
 session_start();
-include_once("../conexao.php");
+include_once("../conexao1.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -28,22 +28,21 @@ include_once("../conexao.php");
 			unset($_SESSION['msg']);
 		}
 
-		$result_cliente="SELECT cod,nome,cpf,rg,tel from e1_cliente";
-		$resultado = mysqli_query($conn,$result_cliente);
+		$result_usuario="SELECT id,nome,email,senha from usuario";
+		$resultado_usuario = mysqli_query($conne,$result_usuario);
 
-	while($row_cliente = mysqli_fetch_assoc($resultado)){
-	echo "Código.....: ".$row_cliente['cod']."<br>";
-	echo "Nome.......: ".$row_cliente['nome']."<br>";
-	echo "CPF........: ".$row_cliente['cpf']."<br>";
-	echo "RG.........: ".$row_cliente['rg']."<br>";
-	echo "Telefone...: ".$row_cliente['tel']."<br>";
+	while($row_usuario = mysqli_fetch_assoc($resultado_usuario)){
+	echo "id.....: ".$row_usuario['id']."<br>";
+	echo "Nome.......: ".$row_usuario['nome']."<br>";
+	echo "email........: ".$row_usuario['email']."<br>";
+	echo "senha.........: ".$row_usuario['senha']."<br>";
     echo "<hr><br>";
 	}
 ?>
 </div> 
 <HR>
 <CENTER>
-	<a href="cliente.html"> <img src="../img/retornar.png" width="20" height="20">  </a></CENTER>
+	<a href="homecadastrousuario.php"> <img src="../img/retornar.png" width="20" height="20">  </a></CENTER>
 
 <br>
 <br>

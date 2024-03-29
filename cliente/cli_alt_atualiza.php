@@ -29,8 +29,8 @@ include_once("../conexao.php");
 		$cpf=$_POST['cpf'];
 		$tel=$_POST['tel'];
 
-		$result_usuario = "UPDATE e1_cliente SET cod='$cod',nome='$nome',rg='$rg',cpf='$cpf',tel='$tel' WHERE cod='$cod'";
-		$resultado_usuario = mysqli_query($conn, $result_usuario);
+		$result_cliente = "UPDATE e1_cliente SET cod='$cod',nome='$nome',rg='$rg',cpf='$cpf',tel='$tel' WHERE cod='$cod'";
+		$resultado_cliente = mysqli_query($conn, $result_cliente);
 		echo "<h2><font color='green'>Atualizado com sucesso!</font></h2>";
 
 	?>

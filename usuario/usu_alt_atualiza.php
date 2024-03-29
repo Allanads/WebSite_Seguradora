@@ -29,7 +29,7 @@ include_once("../conexao1.php");
 		$senha=$_POST['senha'];
 		
 		$result_usuario = "UPDATE usuarios SET nome='$nome',email='$email',senha='$senha' WHERE email='$email'";
-		$resultado_usuario = mysqli_query($conne, $usuario);
+		$resultado_usuario = mysqli_query($conne, $result_usuario);
 		echo "<h2><font color='green'>Atualizado com sucesso!</font></h2>";
 
 	?>

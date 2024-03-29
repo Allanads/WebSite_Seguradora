@@ -30,7 +30,7 @@ include_once("../conexao.php");
 
 $cod = filter_input(INPUT_POST, 'cod',FILTER_SANITIZE_NUMBER_INT);
 $result_cliente = "DELETE FROM e1_cliente WHERE cod=$cod";
-$resultado = mysqli_query($conn,$result_cliente);
+$resultado_cliente = mysqli_query($conn,$result_cliente);
 
 
 if (mysqli_affected_rows($conn)) 

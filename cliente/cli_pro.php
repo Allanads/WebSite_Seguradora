@@ -11,13 +11,13 @@ $tel = filter_input(INPUT_POST, 'tel', FILTER_SANITIZE_STRING);
 
 
 $result_cliente = "INSERT INTO e1_cliente(cod,nome,cpf,rg,tel) VALUES ('$cod', '$nome', '$cpf','$rg','$tel')";
-$resultado = mysqli_query($conn, $result_cliente);
+$resultado_cliente = mysqli_query($conn, $result_cliente);
 
 
 if($conn->affected_rows == 1){
-	$_SESSION['msg'] = "<h2><p style='color:green;'>Usuário cadastrado com sucesso!</p></h2>";
+	$_SESSION['msg'] = "<h2><p style='color:green;'>Cliente cadastrado com sucesso!</p></h2>";
 }else{
-	$_SESSION['msg'] = "<h2><p style='color:red;'>Usuário não foi cadastrado!!!</p></h2>";
+	$_SESSION['msg'] = "<h2><p style='color:red;'>Cliente não foi cadastrado!!!</p></h2>";
 }
 header("Location: cli_cad.php");
 
