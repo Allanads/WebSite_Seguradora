@@ -28,7 +28,7 @@ include_once("../conexao1.php");
 			unset($_SESSION['msg']);
 		}
 
-		$result_usuario="SELECT id,nome,email,senha from usuario";
+		$result_usuario="SELECT id,nome,email,senha from e0_usuario";
 		$resultado_usuario = mysqli_query($conne,$result_usuario);
 
 	while($row_usuario = mysqli_fetch_assoc($resultado_usuario)){
@@ -42,7 +42,7 @@ include_once("../conexao1.php");
 </div> 
 <HR>
 <CENTER>
-	<a href="homecadastrousuario.php"> <img src="../img/retornar.png" width="20" height="20">  </a></CENTER>
+	<a href="usuario.html"> <img src="../img/retornar.png" width="20" height="20">  </a></CENTER>
 
 <br>
 <br>

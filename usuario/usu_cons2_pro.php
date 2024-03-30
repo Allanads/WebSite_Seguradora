@@ -25,7 +25,7 @@ include_once("../conexao1.php");
 <?php
 
 $id = filter_input(INPUT_POST,'id',FILTER_SANITIZE_NUMBER_INT);
-$result_usuario = "SELECT id,nome,email,senha FROM usuario WHERE id=$id";
+$result_usuario = "SELECT id,nome,email,senha FROM e0_usuario WHERE id=$id";
 $resultado_usuario = mysqli_query($conne, $result_usuario);
 
 if ($row_usuario = mysqli_fetch_assoc($resultado_usuario)) {
@@ -38,7 +38,7 @@ if ($row_usuario = mysqli_fetch_assoc($resultado_usuario)) {
 }
 ?>
 </div>
-<a href="homecadastrousuario.php"><hr>
+<a href="usuario.html"><hr>
  <img src="../img/retornar.png" width="20" height="20">  </a>
 
 <br>

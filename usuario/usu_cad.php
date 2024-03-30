@@ -55,7 +55,7 @@ session_start();
 <br>
 <hr>
 
-<a href="homecadastrousuario.php"> <img src="../img/retornar.png" width="20" height="20">  </a>
+<a href="usuario.html"> <img src="../img/retornar.png" width="20" height="20">  </a>
 
 <br>
 <br>

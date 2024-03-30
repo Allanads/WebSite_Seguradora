@@ -15,7 +15,7 @@ include('protect.php');
 
 <center>
     <header class="cabecalho">
-        <h1 class="titulo">SEGURADORA - TEST DO ALLAN</h1>
+        <h1 class="titulo">SEGURADORA </h1>
         <h2 class="titulo">ACIDENTES NÃO ACONTECEM POR ACASO, MAS POR DESCASO!!!!</h2>
     </header>
 
@@ -58,7 +58,7 @@ include('protect.php');
     <br>
 
     <footer>
-        <p style='color:#808080'>&copy; Copyright - Allan Company!!!!
+        <p style='color:#808080'>&copy; Copyright - ATK Company
             <script>
                 var year = new Date();
                 document.writeln(+year.getUTCFullYear());

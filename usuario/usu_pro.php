@@ -10,7 +10,7 @@ $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 
 
 
-$result_usuario = "INSERT INTO usuario(id,nome,email,senha) VALUES ('$id', '$nome', '$email','$senha')";
+$result_usuario = "INSERT INTO e0_usuario(id,nome,email,senha) VALUES ('$id', '$nome', '$email','$senha')";
 $resultado_usuario = mysqli_query($conne, $result_usuario);
 
 

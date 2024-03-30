@@ -28,7 +28,7 @@ include_once("../conexao1.php");
 		$email=$_POST['email'];
 		$senha=$_POST['senha'];
 		
-		$result_usuario = "UPDATE usuarios SET nome='$nome',email='$email',senha='$senha' WHERE email='$email'";
+		$result_usuario = "UPDATE e0_usuario SET nome='$nome',email='$email',senha='$senha' WHERE email='$email'";
 		$resultado_usuario = mysqli_query($conne, $result_usuario);
 		echo "<h2><font color='green'>Atualizado com sucesso!</font></h2>";
 
@@ -41,7 +41,7 @@ include_once("../conexao1.php");
 </form>
 <hr>
 
-<a href="homecadastrousuario.php"> <img src="../img/retornar.png" width="20" height="20">  </a>
+<a href="usuario.html"> <img src="../img/retornar.png" width="20" height="20">  </a>
 
 <br>
 <br>

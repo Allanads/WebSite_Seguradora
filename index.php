@@ -44,20 +44,20 @@ if(strlen($_POST['email']) == 0) {
     $email = $conne->real_escape_string($_POST['email']);
     $senha = $conne->real_escape_string($_POST['senha']);
 
-    $sql_code = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+    $sql_code = "SELECT * FROM e0_usuario WHERE email = '$email' AND senha = '$senha'";
     $sql_query = $conne->query($sql_code) or die("Falha na execução do código SQL: " . $conne->error);
     $quantidade = $sql_query->num_rows;
 
     if($quantidade == 1) {
 
-        $usuario = $sql_query->fetch_assoc();
+        $e0_usuario = $sql_query->fetch_assoc();
         
         if(!isset($_SESSION)) {
             session_start();
         }
 
-        $_SESSION['id'] = $usuario['id'];
-        $_SESSION['nome'] = $usuario['nome'];
+        $_SESSION['id'] = $e0_usuario['id'];
+        $_SESSION['nome'] = $e0_usuario['nome'];
                     
         header("Location: home.php");
 
@@ -86,7 +86,7 @@ if(strlen($_POST['email']) == 0) {
         </p>
     </form>
 
-    <a href="usuario/homecadastrousuario.php"><button style="background: #069cc2; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 10px;">INCLUIR USUÁRIO OU ALTERAR DADOS </button></a>
+    <a href="usuario/usuario.html"><button style="background: #069cc2; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 10px;">INCLUIR USUÁRIO OU ALTERAR DADOS </button></a>
 
 <br>
 <br>

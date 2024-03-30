@@ -26,7 +26,7 @@ include_once("../conexao1.php");
 
 <?php
 $email = filter_input(INPUT_POST,'email',FILTER_SANITIZE_STRING);
-$result_usuario = "SELECT id,nome,email,senha FROM usuario WHERE email=$email";
+$result_usuario = "SELECT id,nome,email,senha FROM e0_usuario WHERE email=$email";
 $resultado_usuario = mysqli_query($conne, $result_usuario);
 $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 ?>
@@ -57,7 +57,7 @@ if ($row_usuario) {
 </form>
 <br><hr>
 	
-<a href="homecadastrousuario.php"> <img src="../img/retornar.png" width="20" height="20">  </a>
+<a href="usuario.html"> <img src="../img/retornar.png" width="20" height="20">  </a>
 
 <br>
 <br>
