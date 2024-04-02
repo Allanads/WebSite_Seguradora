@@ -58,7 +58,7 @@ if ($row_ocorrencia = mysqli_fetch_assoc($resultado_ocorrencia)) {
 </form>
 <br><hr>
 	
-<a href="ocorrencias.html"> <img src="../img/retornar.png" width="20" height="20">  </a>
+<a href="ocorrencias.html"> <img src="../img/retornar.png" width="30" height="30">  </a>
 
 </center>
 

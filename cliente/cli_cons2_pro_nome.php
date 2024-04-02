@@ -6,7 +6,7 @@ include_once("../conexao.php");
 <html>
 <META charset="utf-8">
 <head>
-	<title>SEGURADORA SENAI</title>
+	<title>SEGURADORA</title>
 	<link rel="stylesheet" href="css/estilos.css">
 	<link href="formata.css" rel="stylesheet">
 </head>

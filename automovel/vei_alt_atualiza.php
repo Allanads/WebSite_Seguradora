@@ -13,7 +13,7 @@ include_once("../conexao.php");
 	
 <center>
 <header class="cabecalho">
-	<h1 class="titulo" align="center">SEGURADORA - SENAI PARA TODOS</h1>
+	<h1 class="titulo" align="center">SEGURADORA</h1>
 	<br>
 	<h2 class="titulo" align="center">ACIDENTES NÃO ACONTECEM POR ACASO, MAS POR DESCASO!!!!</h2>
 	<br>
@@ -43,7 +43,7 @@ include_once("../conexao.php");
 </form>
 <hr>
 
-<a href="automovel.html"> <img src="../img/retornar.png" width="20" height="20">  </a>
+<a href="automovel.html"> <img src="../img/retornar.png" width="30" height="30">  </a>
 <br>
 <br>
 <br>

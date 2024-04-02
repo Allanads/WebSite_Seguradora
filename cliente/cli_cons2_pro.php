@@ -29,18 +29,18 @@ $result_cliente = "SELECT cod,nome,cpf,rg,tel FROM e1_cliente WHERE cod=$cod";
 $resultado_cliente = mysqli_query($conn, $result_cliente);
 
 if ($row_cliente = mysqli_fetch_assoc($resultado_cliente)) {
-	echo"Código.....:".$row_cliente['cod']."<br>";
-	echo"Nome.......:".$row_cliente['nome']."<br>";
-	echo"CPF........:".$row_cliente['cpf']."<br>";
-	echo"RG.........:".$row_cliente['rg']."<br>";	
-	echo"Telefone...:".$row_cliente['tel']."<br>";
+	echo "<strong>Código:</strong> ".$row_cliente['cod']."<br>";
+	echo "<strong>Nome:</strong> ".$row_cliente['nome']."<br>";
+	echo "<strong>CPF:</strong> ".$row_cliente['cpf']."<br>";
+	echo "<strong>RG:</strong> ".$row_cliente['rg']."<br>";
+	echo "<strong>Telefone:</strong> ".$row_cliente['tel']."<br><br>";
 }else{
 	echo "Cliente não existe!!!!";
 }
 ?>
 </div>
 <a href="cliente.html"><hr>
- <img src="../img/retornar.png" width="20" height="20">  </a>
+ <img src="../img/retornar.png" width="30" height="30">  </a>
 
 <br>
 <br>

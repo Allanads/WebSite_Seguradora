@@ -21,7 +21,7 @@ if ($row_veiculo = mysqli_fetch_assoc($resultado_veiculo)) {
 }
 ?>
 
-<a href="automovel.html"> <img src="img/retornar.png" width="20" height="20">  </a>
+<a href="automovel.html"> <img src="img/retornar.png" width="30" height="30">  </a>
 
 
 </body>

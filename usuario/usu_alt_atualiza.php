@@ -1,6 +1,6 @@
 ﻿<?php
 session_start();
-include_once("../conexao1.php");
+include_once("../conexao.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +29,7 @@ include_once("../conexao1.php");
 		$senha=$_POST['senha'];
 		
 		$result_usuario = "UPDATE e0_usuario SET nome='$nome',email='$email',senha='$senha' WHERE email='$email'";
-		$resultado_usuario = mysqli_query($conne, $result_usuario);
+		$resultado_usuario = mysqli_query($conn, $result_usuario);
 		echo "<h2><font color='green'>Atualizado com sucesso!</font></h2>";
 
 	?>
@@ -41,7 +41,7 @@ include_once("../conexao1.php");
 </form>
 <hr>
 
-<a href="usuario.html"> <img src="../img/retornar.png" width="20" height="20">  </a>
+<a href="usuario.html"> <img src="../img/retornar.png" width="30" height="30">  </a>
 
 <br>
 <br>

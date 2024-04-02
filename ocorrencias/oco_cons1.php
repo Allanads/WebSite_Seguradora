@@ -9,7 +9,7 @@ include_once("../conexao.php")
 	<link href="../css/formata.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<body background="../img/fundo.png">
+
 <center>
 		<header class="cabecalho">
 		<h1 class="titulo">Pesquisa de ocorrências na seguradora</h1>
@@ -37,7 +37,7 @@ include_once("../conexao.php")
 
 <br><br><hr>
 	 
-<a href="ocorrencias.html"> <img src="../img/retornar.png" width="20" height="20">  </a>
+<a href="ocorrencias.html"> <img src="../img/retornar.png" width="30" height="30">  </a>
 
 
 </body>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("../conexao1.php")
+include_once("../conexao.php")
 ?>
 <!DOCTYPE html>
 <html>
@@ -47,7 +47,7 @@ include_once("../conexao1.php")
 <br>
 <hr>
 	 
-<a href="usuario.html"> <img src="../img/retornar.png" width="20" height="20">  </a>
+<a href="usuario.html"> <img src="../img/retornar.png" width="30" height="30">  </a>
 
 <br>
 <br>

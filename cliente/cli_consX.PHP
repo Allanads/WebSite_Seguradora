@@ -19,9 +19,8 @@ include_once("../conexao.php");
 	<br>
 	<h2 class="titulo" align="center">LISTA DE CLIENTES CADASTRADOS</h2>
 </header>
-
-<div style="text-align: left;">
 		<hr>
+		<br>
 		<?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg'];
@@ -32,18 +31,16 @@ include_once("../conexao.php");
 		$resultado_cliente = mysqli_query($conn,$result_cliente);
 
 	while($row_cliente = mysqli_fetch_assoc($resultado_cliente)){
-	echo "Código.....: ".$row_cliente['cod']."<br>";
-	echo "Nome.......: ".$row_cliente['nome']."<br>";
-	echo "CPF........: ".$row_cliente['cpf']."<br>";
-	echo "RG.........: ".$row_cliente['rg']."<br>";
-	echo "Telefone...: ".$row_cliente['tel']."<br>";
+	echo "<strong>Código:</strong> ".$row_cliente['cod']."<br>";
+	echo "<strong>Nome:</strong> ".$row_cliente['nome']."<br>";
+	echo "<strong>CPF:</strong> ".$row_cliente['cpf']."<br>";
+	echo "<strong>RG:</strong> ".$row_cliente['rg']."<br>";
+	echo "<strong>Telefone:</strong> ".$row_cliente['tel']."<br><br>";
     echo "<hr><br>";
 	}
 ?>
-</div> 
-<HR>
 <CENTER>
-	<a href="cliente.html"> <img src="../img/retornar.png" width="20" height="20">  </a></CENTER>
+	<a href="cliente.html"> <img src="../img/retornar.png" width="30" height="30">  </a></CENTER>
 
 <br>
 <br>

@@ -1,6 +1,6 @@
 ﻿<?php
 session_start();
-include_once("../conexao1.php");
+include_once("../conexao.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,7 +29,7 @@ include_once("../conexao1.php");
 		}
 
 		$result_usuario="SELECT id,nome,email,senha from e0_usuario";
-		$resultado_usuario = mysqli_query($conne,$result_usuario);
+		$resultado_usuario = mysqli_query($conn,$result_usuario);
 
 	while($row_usuario = mysqli_fetch_assoc($resultado_usuario)){
 	echo "id.....: ".$row_usuario['id']."<br>";
@@ -42,7 +42,7 @@ include_once("../conexao1.php");
 </div> 
 <HR>
 <CENTER>
-	<a href="usuario.html"> <img src="../img/retornar.png" width="20" height="20">  </a></CENTER>
+	<a href="usuario.html"> <img src="../img/retornar.png" width="30" height="30">  </a></CENTER>
 
 <br>
 <br>

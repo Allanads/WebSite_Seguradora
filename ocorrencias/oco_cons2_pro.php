@@ -34,7 +34,7 @@ if ($row_ocorrencia = mysqli_fetch_assoc($resultado_ocorrencia)) {
 ?>
 
 <a href="ocorrencias.html"><hr>
- <img src="../img/retornar.png" width="20" height="20">  </a>
+ <img src="../img/retornar.png" width="30" height="30">  </a>
 
 
 </body>

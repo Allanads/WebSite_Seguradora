@@ -6,7 +6,7 @@ include_once("../conexao.php")
 <html>
 <head>
 	<link href="../css/formata.css" rel="stylesheet">
-	<title> ** CONSULTA DE CLIENTE</title>
+	<title> ** CONSULTA DO VEICULO</title>
 </head>
 <body>
 
@@ -36,7 +36,7 @@ include_once("../conexao.php")
 
 <br><br><hr>
 	 
-<a href="automovel.html"> <img src="../img/retornar.png" width="20" height="20">  </a>
+<a href="automovel.html"> <img src="../img/retornar.png" width="30" height="30">  </a>
 
 
 </body>

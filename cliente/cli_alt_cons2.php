@@ -64,7 +64,7 @@ if ($row_cliente = mysqli_fetch_assoc($resultado_cliente)) {
 </form>
 <br><hr>
 	
-<a href="cliente.html"> <img src="../img/retornar.png" width="20" height="20">  </a>
+<a href="cliente.html"> <img src="../img/retornar.png" width="30" height="30">  </a>
 
 <br>
 <br>

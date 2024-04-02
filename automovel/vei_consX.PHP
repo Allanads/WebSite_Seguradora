@@ -10,7 +10,7 @@ include_once("../conexao.php");
 	<link rel="stylesheet" href="css/estilos.css">
 	<link href="formata.css" rel="stylesheet">
 </head>
-<body background="img/fundo.png">
+
 	
 <center>
 <header class="cabecalho">
@@ -21,31 +21,31 @@ include_once("../conexao.php");
 	<h2 class="titulo" align="center">LISTA DE VEÍCULOS CADASTRADOS</h2>
 </header>
 		<hr>
+		<br>
 		<?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg'];
 			unset($_SESSION['msg']);
 		}
-
+		
 		$result_veiculo="SELECT cod,placa,renavan,fabricante,modelo,ano from e2_veiculos";
 		$resultado_veiculo= mysqli_query($conn,$result_veiculo);
-
+		
 	while($row_veiculo = mysqli_fetch_assoc($resultado_veiculo)){
-	echo "Código----: ".$row_veiculo['cod']."<br>";
-	echo "Placa-----: ".$row_veiculo['placa']."<br>";
-	echo "renavan---: ".$row_veiculo['renavan']."<br>";
-	echo "fabricante: ".$row_veiculo['fabricante']."<br>";
-	echo "modelo----: ".$row_veiculo['modelo']."<br>";
-	echo "ano-------: ".$row_veiculo['ano']."<br>";
+		echo "<strong>Código:</strong> " . $row_veiculo['cod'] . "<br>";
+		echo "<strong>Placa:</strong> " . $row_veiculo['placa'] . "<br>";
+		echo "<strong>Renavan:</strong> " . $row_veiculo['renavan'] . "<br>";
+		echo "<strong>Fabricante:</strong> " . $row_veiculo['fabricante'] . "<br>";
+		echo "<strong>Modelo:</strong> " . $row_veiculo['modelo'] . "<br>";
+		echo "<strong>Ano:</strong> " . $row_veiculo['ano'] . "<br><br>";
     echo "<hr><br>";
 }
 ?>
 	</body>
-<HR>
 <CENTER>
-	<a href="automovel.html"> <img src="../img/retornar.png" width="20" height="20">  </a></CENTER>
+	<a href="automovel.html"> <img src="../img/retornar.png" width="30" height="30">  </a></CENTER>
 
-<<br>
+<br>
 <br>
 <br>
 <br>

@@ -30,20 +30,19 @@ $result_veiculo = "SELECT cod,placa,renavan,fabricante,modelo,ano FROM e2_veicul
 $resultado_veiculo = mysqli_query($conn, $result_veiculo);
 
 if ($row_veiculo = mysqli_fetch_assoc($resultado_veiculo)) {
-	echo"Cod........:".$row_veiculo['cod']."<br>";
-	echo"placa........:".$row_veiculo['placa']."<br>";
-	echo"renavan........:".$row_veiculo['renavan']."<br>";
-	echo"fabricante........:".$row_veiculo['fabricante']."<br>";
-	echo"modelo........:".$row_veiculo['modelo']."<br>";
-	echo"ano........:".$row_veiculo['ano']."<br>";
+	echo "<strong>Código:</strong> " . $row_veiculo['cod'] . "<br>";
+	echo "<strong>Placa:</strong> " . $row_veiculo['placa'] . "<br>";
+	echo "<strong>Renavan:</strong> " . $row_veiculo['renavan'] . "<br>";
+	echo "<strong>Fabricante:</strong> " . $row_veiculo['fabricante'] . "<br>";
+	echo "<strong>Modelo:</strong> " . $row_veiculo['modelo'] . "<br>";
+	echo "<strong>Ano:</strong> " . $row_veiculo['ano'] . "<br><br>";
 
 }else{
 	echo "veiculo não existe!!!!";
 }
 ?>
 <center>
-<a href="automovel.html"><hr>
- <img src="../img/retornar.png" width="20" height="20">  </a>
+<a href="automovel.html"><hr> <img src="../img/retornar.png" width="30" height="30">  </a></center>
 
 <br>
 <br>

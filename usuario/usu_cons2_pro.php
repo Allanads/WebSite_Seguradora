@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("../conexao1.php");
+include_once("../conexao.php");
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,7 +26,7 @@ include_once("../conexao1.php");
 
 $id = filter_input(INPUT_POST,'id',FILTER_SANITIZE_NUMBER_INT);
 $result_usuario = "SELECT id,nome,email,senha FROM e0_usuario WHERE id=$id";
-$resultado_usuario = mysqli_query($conne, $result_usuario);
+$resultado_usuario = mysqli_query($conn, $result_usuario);
 
 if ($row_usuario = mysqli_fetch_assoc($resultado_usuario)) {
 	echo"id.....:".$row_usuario['id']."<br>";
@@ -39,7 +39,7 @@ if ($row_usuario = mysqli_fetch_assoc($resultado_usuario)) {
 ?>
 </div>
 <a href="usuario.html"><hr>
- <img src="../img/retornar.png" width="20" height="20">  </a>
+ <img src="../img/retornar.png" width="30" height="30">  </a>
 
 <br>
 <br>

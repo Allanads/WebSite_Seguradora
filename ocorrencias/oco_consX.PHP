@@ -10,7 +10,7 @@ include_once("../conexao.php");
 		<link href="../css/formata.css" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css">		
 	</head>
-	<body background="../img/fundo.png">
+	
 		<header class="cabecalho">
 		<CENTER><H1 class ="titulo"> LISTA DE OCORRÊNCIAS CADASTRADOS NA SEGURADORA </H1></CENTER>
 		</header>
@@ -35,5 +35,5 @@ include_once("../conexao.php");
 	</body>
 <HR>
 <CENTER>
-	<a href="ocorrencias.html"> <img src="../img/retornar.png" width="20" height="20">  </a></CENTER>
+	<a href="ocorrencias.html"> <img src="../img/retornar.png" width="30" height="30">  </a></CENTER>
 </html>
