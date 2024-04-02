@@ -26,7 +26,7 @@ include_once("../conexao.php");
 
 <?php
 $email = filter_input(INPUT_POST,'email',FILTER_SANITIZE_STRING);
-$result_usuario = "SELECT id,nome,email,senha FROM e0_usuario WHERE email=$email";
+$result_usuario = "SELECT id, nome, email, senha FROM e0_usuario WHERE email='" . mysqli_real_escape_string($conn, $email) . "'";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
 $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 ?>
