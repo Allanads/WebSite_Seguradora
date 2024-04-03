@@ -14,7 +14,7 @@ $result_usuario = "INSERT INTO e0_usuario(id,nome,email,senha) VALUES ('$id', '$
 $resultado_usuario = mysqli_query($conn, $result_usuario);
 
 
-if($conne->affected_rows == 1){
+if($conn->affected_rows == 1){
 	$_SESSION['msg'] = "<h2><p style='color:green;'>Usuário cadastrado com sucesso!</p></h2>";
 }else{
 	$_SESSION['msg'] = "<h2><p style='color:red;'>Usuário não foi cadastrado!!!</p></h2>";

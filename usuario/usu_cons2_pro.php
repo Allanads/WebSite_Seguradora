@@ -29,10 +29,10 @@ $result_usuario = "SELECT id,nome,email,senha FROM e0_usuario WHERE id=$id";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
 
 if ($row_usuario = mysqli_fetch_assoc($resultado_usuario)) {
-	echo"id.....:".$row_usuario['id']."<br>";
-	echo"Nome.......:".$row_usuario['nome']."<br>";
-	echo"email........:".$row_usuario['email']."<br>";
-	echo"senha.........:".$row_usuario['senha']."<br>";	
+	echo"<strong>id:</strong>".$row_usuario['id']."<br>";
+	echo"<strong>Nome</strong>:".$row_usuario['nome']."<br>";
+	echo"<strong>email</strong>:".$row_usuario['email']."<br>";
+	echo"<strong>senha</strong>:".$row_usuario['senha']."<br>";	
 }else{
 	echo "Usuàrio não existe!!!!";
 }

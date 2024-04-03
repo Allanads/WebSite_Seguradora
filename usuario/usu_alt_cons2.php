@@ -10,7 +10,6 @@ include_once("../conexao.php");
 	<link rel="stylesheet" href="css/estilos.css">
 	<link href="formata.css" rel="stylesheet">
 </head>
-<body background="../img/fundo.png">
 	
 <center>
 <header class="cabecalho">
@@ -35,17 +34,17 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 if ($row_usuario) {
 
 			
-	        echo "CONSTA NA NOSSA BASE DE DADOS O USUÁRIO:<BR>";
+	        echo "<h1><font color='green'>Consta na nossa base de dados o usuário</font></h1><BR>";
 
-			echo "<h1><font color='green'>Para realizar a alteração preencha os campos abaixo:</font></h1><BR>";
+			echo "Para realizar a alteração preencha os campos abaixo:<br><br>";
 						
-			echo "<label>Nome......:</label>
-					<input name='nome' type='text' placeholder=' ".$row_usuario['nome']."'><br></br>";
+			echo "<label><strong>Nome:</strong></label>
+			<input name='nome' type='text' placeholder=' ".$row_usuario['nome']."'><br></br>";
 			
-			echo "<label>E-mail.......:</label>
+			echo "<label><strong>E-mail:</strong></label>
 					<input name='email' type='text' placeholder=' ".$row_usuario['email']."'><br></br>";
 
-			echo "<label>Senha........:</label>
+			echo "<label><strong>Senha:</strong></label>
 					<input name='senha' type='text' placeholder=' ".$row_usuario['senha']."'><br></br>";
 
 			echo "<input type='submit' name='Atualiza' value='Atualiza'> ";
