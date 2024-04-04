@@ -8,6 +8,7 @@
 </head>
 	
 <center>
+	<body>
 <header class="cabecalho">
 	<h1 class="titulo" align="center">SEGURADORA</h1>
 	<br>
@@ -22,7 +23,7 @@
 	 <div class="form-container">
 		<form method="post" name="consultar_usuario" action="usu_alt_cons2.php">
 			<label> E-mail </label>
-			<input type="text" name="email" maxlength="140" required placeholder="Digite seu E-mail">
+			<input type="email" name="email" maxlength="140" required placeholder="Digite seu E-mail">
 			<input type="submit" name="enviar" value="Consultar">
 		</form>
 		 </div>
