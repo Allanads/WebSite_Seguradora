@@ -23,12 +23,13 @@ include_once("../conexao.php");
 	<hr>
 	<br>
 	<?php
-		$id=$_POST['id'];
+		
 		$nome=$_POST['nome'];
 		$email=$_POST['email'];
 		$senha=$_POST['senha'];
-		
-		$result_usuario = "UPDATE e0_usuario SET nome='$nome',email='$email',senha='$senha' WHERE email='$email'";
+		//UPDATE e0_usuario SET nome=1234 WHERE email="fabio@teste.com";
+		//$result_usuario = "UPDATE e0_usuario SET nome='$nome',email='$email',senha='$senha' WHERE email='$email'";
+		$result_usuario = "UPDATE e0_usuario SET nome='garrafa',email='garrafa@teste.com',senha='1234' WHERE email='fabio@teste.com'";
 		$resultado_usuario = mysqli_query($conn, $result_usuario);
 		echo "<h2><font color='green'>Atualizado com sucesso!</font></h2>";
 

@@ -39,13 +39,13 @@ if ($row_usuario) {
 			echo "Para realizar a alteração preencha os campos abaixo:<br><br>";
 						
 			echo "<label><strong>Nome:</strong></label>
-			<input name='nome' type='text' placeholder=' ".$row_usuario['nome']."'><br></br>";
+			<input name='nome' id='nome' type='text' placeholder=' ".$row_usuario['nome']."'><br></br>";
 			
 			echo "<label><strong>E-mail:</strong></label>
-					<input name='email' type='text' placeholder=' ".$row_usuario['email']."'><br></br>";
+					<input name='email' id='email' type='email' placeholder=' ".$row_usuario['email']."'><br></br>";
 
 			echo "<label><strong>Senha:</strong></label>
-					<input name='senha' type='text' placeholder=' ".$row_usuario['senha']."'><br></br>";
+					<input name='senha' id'senha' type='text' placeholder=' ".$row_usuario['senha']."'><br></br>";
 
 			echo "<input type='submit' name='Atualiza' value='Atualiza'> ";
 

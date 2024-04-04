@@ -26,7 +26,7 @@ include_once("../conexao.php")
 <div class="form-container">
 	<form method="POST" action="usu_cons2_pro.php">
 		<label> E-MAIL: </label>
-		<input type="text"  required name="email" placeholder="Digite o e-mail do usuário">
+		<input type="email"  required name="email" placeholder="Digite o e-mail do usuário">
 		<input type="submit" name="Consultar">
 	</form>
 	<br>
