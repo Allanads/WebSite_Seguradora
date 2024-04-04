@@ -1,11 +1,13 @@
-/* PL-SEGURADORA: */
+-- Criar primeiramente o banco de dados em seguida as tabelas
+
+CREATE DATABASE seguradora;
 
 CREATE TABLE E0_USUARIO (
     ID INT(11) PRIMARY KEY,
     NOME VARCHAR(140),
     EMAIL VARCHAR(140),
-    SENHA VARCHAR(16),
-    );
+    SENHA VARCHAR(16) 
+);
 
 CREATE TABLE E1_CLIENTE (
     COD INT(3) PRIMARY KEY,
