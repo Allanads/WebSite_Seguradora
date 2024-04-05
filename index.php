@@ -9,24 +9,18 @@ include('conexao.php');
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-</head>
-<head>
-    <title>SEGURADORA</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link href="formata.css" rel="stylesheet">
 </head>
 
 <center>
-    <header class="cabecalho">
-        <h1 class="titulo" align="center">SEGURADORA</h1>
-        <br>
-        <h2 class="titulo" align="center">ACIDENTES NÃO ACONTECEM POR ACASO, MAS POR DESCASO!!!!</h2>
-        <br>
-        <h2 class="titulo" align="center">ACESSE SUA CONTA</h2>
-
-    </header>
-
-    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
 
     <div style="text-align: center;">
@@ -95,7 +89,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
 
     <br><br>
-    <hr>
+
 
     
 
