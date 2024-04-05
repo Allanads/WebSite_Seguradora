@@ -2,72 +2,86 @@
 session_start();
 include_once("../conexao.php");
 ?>
-<!DOCTYPE html>
-<html>
-<META charset="utf-8">
+<!DOCTYPE HTML>
+<html lang="pt">
+
 <head>
-	<title>SEGURADORA</title>
-	<link rel="stylesheet" href="css/estilos.css">
-	<link href="formata.css" rel="stylesheet">
+    <title>WebSite SEGURADORA ATK</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
-	
-<center>
-<header class="cabecalho">
-	<h1 class="titulo" align="center">SEGURADORA</h1>
-	<br>
-	<h2 class="titulo" align="center">ACIDENTES NÃO ACONTECEM POR ACASO, MAS POR DESCASO!!!!</h2>
-	<br>
-	<h2 class="titulo" align="center">ALTERAR DADOS DO USUÁRIO</h2>
+
+<body class="subpage">
+
+    <!-- Header -->
+
+    <header id="header" class="alt">
+        <div class="logo"><a href="index.html">WebSite <span>by ATK
+                    Company</span></a></div>
+        <a href="#menu"><span>Menu</span></a>
+    </header>
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="usuario.html">Preferências do usuário</a></li>
+            <li><a href="usu_cad.php">Cadastrar</a></li>
+            <li><a href="usu_alt_cons.php">Atualizar</a></li>
+            <li><a href="../login.php">Login</a></li>
+        </ul>
+    </nav>
+    <!-- Content -->
+    <!--
+            Note: To show a background image, set the "data-bg" attribute below
+            to the full filename of your image. This is used in each section to set
+            the background image.
+        -->
+    <section id="post" class="wrapper bg-img" data-bg="banner4.jpg">
+        <div class="inner">
+            <article class="box">
+                <header>
+                    <center>
+                        <h2>APURAÇÃO DE DADOS</h2>
+
+                        <div class="form-container">
+                            <?php
+
+                            $nome = $_POST['nome'];
+                            $email = $_POST['email'];
+                            $senha = $_POST['senha'];
+                            //UPDATE e0_usuario SET nome=1234 WHERE email="fabio@teste.com";
+                            //$result_usuario = "UPDATE e0_usuario SET nome='$nome',email='$email',senha='$senha' WHERE email='$email'";
+                            $result_usuario = "UPDATE e0_usuario SET nome='garrafa',email='garrafa@teste.com',senha='1234' WHERE email='fabio@teste.com'";
+                            $resultado_usuario = mysqli_query($conn, $result_usuario);
+                            echo "<h2><font color='green'>Atualizado com sucesso!</font></h2>";
+
+                            ?>
+                            <br>
+                            <center>
+                                <form method="post" name="consultar_usuario" action="usu_alt_cons.php">
+                                    <label>Fazer nova alteração ? </label>
+                                    <input type="submit" name="voltar" value="Voltar">
+                                </form>
+                        </div>
+</body>
 
 </header>
-	<hr>
-	<br>
-	<?php
-		
-		$nome=$_POST['nome'];
-		$email=$_POST['email'];
-		$senha=$_POST['senha'];
-		//UPDATE e0_usuario SET nome=1234 WHERE email="fabio@teste.com";
-		//$result_usuario = "UPDATE e0_usuario SET nome='$nome',email='$email',senha='$senha' WHERE email='$email'";
-		$result_usuario = "UPDATE e0_usuario SET nome='garrafa',email='garrafa@teste.com',senha='1234' WHERE email='fabio@teste.com'";
-		$resultado_usuario = mysqli_query($conn, $result_usuario);
-		echo "<h2><font color='green'>Atualizado com sucesso!</font></h2>";
 
-	?>
-	<br>
-	<center>
-<form method="post" name="consultar_usuario" action="usu_alt_cons.php">
-	<label>Fazer nova alteração ? </label>
-	<input type="submit" name="voltar" value="Voltar">
-</form>
-<hr>
-
-<a href="usuario.html"> <img src="../img/retornar.png" width="30" height="30">  </a>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<footer>
-<p style='color:#808080'>&copy; Copyright  <script>var year=new Date();document.writeln(+year.getUTCFullYear());</script></p>
-</footer>
-
-</center>
-
+</article>
+</div>
+</section>
+<div class="copyright">
+    WebSite <a>By Company ATK</a>
+</div>
+<!-- Scripts -->
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.scrolly.min.js"></script>
+<script src="../assets/js/jquery.scrollex.min.js"></script>
+<script src="../assets/js/skel.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
 </body>
+
 </html>

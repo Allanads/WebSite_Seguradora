@@ -11,7 +11,7 @@
     <title>SEGURADORA</title>
     <link rel="stylesheet" href="css/estilos.css">
 </head>
-<!--<body background="img/fundo.png">-->
+
 
 <center>
     <header class="cabecalho">

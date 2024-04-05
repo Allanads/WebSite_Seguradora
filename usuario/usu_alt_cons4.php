@@ -28,7 +28,7 @@ session_start();
             <li><a href="../index.html">Home</a></li>
             <li><a href="usuario.html">Preferências do usuário</a></li>
             <li><a href="usu_cad.php">Cadastrar</a></li>
-            <li><a href="usu_alt_cons4.php">Atualizar</a></li>
+            <li><a href="usu_alt_cons.php">Atualizar</a></li>
             <li><a href="../login.php">Login</a></li>
             </ul>
         </nav>
@@ -49,15 +49,13 @@ session_start();
 
                             <div class="form-container">
                                 <form method="post" name="consultar_usuario"
-                                    action="usu_alt_cons3.php">
+                                    action="usu_alt_cons2.php">
                                     <label><strong>E-mail:</strong></label>
                                     <input type="email" name="email"
                                         maxlength="140" required
                                         placeholder="Digite seu E-mail">
 										<br>
-
                                         <input type="submit" name="enviar" value="Consultar" style="background-color: #03ad61; color: white;">
-                                
                                 </form>
                                 <a href="usuario.html"><button>Voltar</button></a>
                             </div>

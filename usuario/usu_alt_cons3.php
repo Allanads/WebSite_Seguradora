@@ -52,29 +52,29 @@ include_once("../conexao.php");
 							$resultado_usuario = mysqli_query($conn, $result_usuario);
 							$row_usuario = mysqli_fetch_assoc($resultado_usuario);
 							?>
-							<form method="POST" name="alterar_usuario" action="usu_alt_atualiza.php">
+							<form method="POST" name="alterar_usuario" action="usu_alt_cons2.php">
 								<?php
 								if ($row_usuario) {
 
 
-									echo "<h1><font color='green' size='+1'>Consta na nossa base de dados o usuário</font></h1>";
-
-									echo "Para realizar a alteração preencha os campos abaixo:<br><br>";
+									echo "<h1><font color='green' size='+1'>Consta na nossa base de dados o usuário:</font></h1>";
 
 									echo "<label><strong>Nome:</strong></label>
-			<input name='nome' id='nome' type='text' placeholder=' " . $row_usuario['nome'] . "'><br>";
+									<span>" . $row_usuario['nome'] . "</span><br><br>";
 
 									echo "<label><strong>E-mail:</strong></label>
-					<input name='email' id='email' type='email' placeholder=' " . $row_usuario['email'] . "'><br>";
+									<span>" . $row_usuario['email'] . "</span><br><br>";
 
 									echo "<label><strong>Senha:</strong></label>
-					<input name='senha' id'senha' type='text' placeholder=' " . $row_usuario['senha'] . "'><br>";
-
-									echo "<input type='submit' name='Atualiza' value='Atualiza'> ";
+									<span>" . $row_usuario['senha'] . "</span><br>";
 								} else {
 									echo "<h2><font color='red' size='+2'>Usuário não existe!!!!!</font></h2>";
 								}
 								?>
+							</form>
+							<form action="usu_alt_cons.php">
+							<label>Deseja fazer uma nova pesquisa ? </label>
+							<button>VOLTAR </button>
 							</form>
 						</div>
 </body>

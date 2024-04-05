@@ -1,71 +1,83 @@
 <?php
 session_start();
-include_once("../conexao.php");
+include_once("../conexao.php")
 ?>
-<!DOCTYPE html>
-<html>
-<META charset="utf-8">
+<!DOCTYPE HTML>
+<html lang="pt">
+
 <head>
-	<title>SEGURADORA</title>
-	<link rel="stylesheet" href="css/estilos.css">
-	<link href="formata.css" rel="stylesheet">
+    <title>WebSite SEGURADORA ATK</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
-<body background="img/fundo.png">
-	
-<center>
-<header class="cabecalho">
-	<h1 class="titulo" align="center">SEGURADORA</h1>
-	<br>
-	<h2 class="titulo" align="center">ACIDENTES NÃO ACONTECEM POR ACASO, MAS POR DESCASO!!!!</h2>
-	<br>
-	<h2 class="titulo" align="center">CONSULTA DE USUARIO POR NOME</h2>
 
-</header>
+<body class="subpage">
 
-<body>
-<div style="text-align: left;">
-<hr>
-<?php
-$nome = filter_input(INPUT_POST,'nome',FILTER_SANITIZE_STRING);
-$result_usuario = "SELECT nome FROM e0_usuario WHERE nome=$nome";
-$resultado_usuario = mysqli_query($conn, $result_usuario);
+    <!-- Header -->
 
-if ($row_usuario = mysqli_fetch_assoc($resultado_usuario)) {
-	echo"<strong>id:</strong>".$row_usuario['id']."<br>";
-	echo"<strong>Nome</strong>:".$row_usuario['nome']."<br>";
-	echo"<strong>email</strong>:".$row_usuario['email']."<br>";
-	echo"<strong>senha</strong>:".$row_usuario['senha']."<br>";
-}else{
-		echo "Usuário não existe!!!!";
-}
-?>
-</div>
-<a href="usuario.html"> <img src="img/retornar.png" width="30" height="30">  </a>
+    <header id="header" class="alt">
+        <div class="logo"><a href="index.html">WebSite <span>by ATK Company</span></a></div>
+        <a href="#menu"><span>Menu</span></a>
+    </header>
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="../index.html">Home</a></li>
+            <br>
+            <li><a href="usu_cad.php">Cadastrar</a></li>
+            <li><a href="usu_alt_cons.php">Atualizar</a></li>
+            <li><a href="../login.php">Login</a></li>
+        </ul>
+    </nav>
+    <!-- Content -->
+    <!--
+            Note: To show a background image, set the "data-bg" attribute below
+            to the full filename of your image. This is used in each section to set
+            the background image.
+        -->
+    <section id="post" class="wrapper bg-img" data-bg="banner4.jpg">
+        <div class="inner">
+            <article class="box">
+                <header>
+                    <center>
+                        <h2>CADASTRO DE USUÁRIO</h2>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+                        <body>
+                            <div style="text-align: left;">
+                                <hr>
+                                <?php
+                                $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+                                $result_usuario = "SELECT nome FROM e0_usuario WHERE nome=$nome";
+                                $resultado_usuario = mysqli_query($conn, $result_usuario);
 
-<footer>
-<p style='color:#808080'>&copy; Copyright  <script>var year=new Date();document.writeln(+year.getUTCFullYear());</script> HTML.am - Jesiel Araujo Pedroza </p>
-</footer>
+                                if ($row_usuario = mysqli_fetch_assoc($resultado_usuario)) {
+                                    echo "<strong>id:</strong>" . $row_usuario['id'] . "<br>";
+                                    echo "<strong>Nome</strong>:" . $row_usuario['nome'] . "<br>";
+                                    echo "<strong>email</strong>:" . $row_usuario['email'] . "<br>";
+                                    echo "<strong>senha</strong>:" . $row_usuario['senha'] . "<br>";
+                                } else {
+                                    echo "Usuário não existe!!!!";
+                                }
+                                ?>
+                            </div>
 
-</center>
+                </header>
 
+            </article>
+        </div>
+    </section>
+    <div class="copyright">
+        WebSite <a>By Company ATK</a>
+    </div>
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/skel.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
+
 </html>
