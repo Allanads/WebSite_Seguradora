@@ -26,7 +26,7 @@ include('conexao.php');
 	<nav id="menu">
 		<ul class="links">
 			<li><a href="index.html">Home</a></li>
-			<li><a href="usuario/usuario.html">Incluir e Alterar usuário</a></li>
+			<li><a href="usuario/usuario.html">Incluir e Alterar dados do usuário</a></li>
 		</ul>
 	</nav>
 	<!-- Content -->

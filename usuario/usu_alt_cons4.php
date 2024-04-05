@@ -49,15 +49,13 @@ session_start();
 
                             <div class="form-container">
                                 <form method="post" name="consultar_usuario"
-                                    action="usu_alt_cons3.php">
+                                    action="usu_alt_cons2.php">
                                     <label><strong>E-mail:</strong></label>
                                     <input type="email" name="email"
                                         maxlength="140" required
                                         placeholder="Digite seu E-mail">
 										<br>
-
                                         <input type="submit" name="enviar" value="Consultar" style="background-color: #03ad61; color: white;">
-                                
                                 </form>
                                 <a href="usuario.html"><button>Voltar</button></a>
                             </div>
