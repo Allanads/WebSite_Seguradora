@@ -1,78 +1,86 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="pt">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de usuários</title>
+    <title>WebSite SEGURADORA ATK</title>
+    <meta charset="utf-8">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
-<head>
-    <title>SEGURADORA</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <link href="formata.css" rel="stylesheet">
-</head>
+<body class="subpage">
 
-<center>
-    <header class="cabecalho">
-        <h1 class="titulo" align="center">SEGURADORA</h1>
-        <br>
-        <h2 class="titulo" align="center">ACIDENTES NÃO ACONTECEM POR ACASO, MAS POR DESCASO!!!!</h2>
-        <br>
-        <h2 class="titulo" align="center">CADASTRO DE USUÁRIOS </h2>
+    <!-- Header -->
 
+    <header id="header" class="alt">
+        <div class="logo"><a href="index.html">WebSite <span>by ATK Company</span></a></div>
+        <a href="#menu"><span>Menu</span></a>
     </header>
+    <!-- Nav -->
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="../index.html">Home</a></li>
+            <br>
+            <li><a href="usu_cad.php">Cadastrar</a></li>
+            <li><a href="usu_alt_cons.php">Atualizar</a></li>
+            <li><a href="../login.php">Login</a></li>
+        </ul>
+    </nav>
+    <!-- Content -->
+    <!--
+            Note: To show a background image, set the "data-bg" attribute below
+            to the full filename of your image. This is used in each section to set
+            the background image.
+        -->
+    <section id="post" class="wrapper bg-img" data-bg="banner4.jpg">
+        <div class="inner">
+            <article class="box">
+                <header>
+                    <center>
+                        <h2>PREFERÊNCIAS DE USUÁRIO</h2>
 
-    <br>
-    <br>
-    <br>
+                        <img src="images/login.gif" alt="GIF animado de exemplo" width="350" height="350" title="Cadastro"> <br>
 
-    <img src="../img/img2.png" title="Cadastro"> <br>
+                        <style>
+                            .botao-verde {
+                                background-color: #03ad61;
+                            }
+                        </style>
 
-    <a href="usu_cad.php"><button style="background: #069cc2; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 10px;">INCLUIR </button></a>
+                        <a href="usu_cad.php"><button class="botao-verde">CADASTRAR</button></a>
 
-    <a href="usu_alt_cons.php"><button style="background: #069cc2; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 10px;">ATUALIZAR </button></a>
+                        </form>
+                        </p>
+                        </form>
 
-
-
-    <br><br>
-    <hr>
-
-
-    <a href="../login.php"> <img src="../img/retornar.png" width="30" height="30"> </a>
-
-
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <footer>
-        <p style='color:#808080'>&copy; Copyright
-            <script>
-                var year = new Date();
-                document.writeln(+year.getUTCFullYear());
-            </script>
-        </p>
-    </footer>
-
-</center>
-
+                </header>
+                <center>
+                    <style>
+                        .botao-azul-claro {
+                            background-color: #03619e;
+                        }
+                    </style>
+                    <form action="usu_alt_cons.php">
+                        <button class="botao-azul-claro">ATUALIZAR</button>
+                    </form>
+                    <form action="../login.php">
+                        <button>LOGIN </button>
+                    </form>
+                </center>
+            </article>
+        </div>
+    </section>
+    <div class="copyright">
+        WebSite <a>By Company ATK</a>
+    </div>
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/jquery.scrolly.min.js"></script>
+    <script src="../assets/js/jquery.scrollex.min.js"></script>
+    <script src="../assets/js/skel.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
 </body>
 
 </html>

@@ -2,86 +2,98 @@
 session_start();
 include_once("../conexao.php");
 ?>
-<!DOCTYPE html>
-<html>
-<META charset="utf-8">
+<!DOCTYPE HTML>
+<html lang="pt">
+
 <head>
-	<title>SEGURADORA</title>
-	<link rel="stylesheet" href="css/estilos.css">
-	<link href="formata.css" rel="stylesheet">
+	<title>WebSite SEGURADORA ATK</title>
+	<meta charset="utf-8">
+	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
 </head>
-	
-<center>
-<header class="cabecalho">
-	<h1 class="titulo" align="center">SEGURADORA</h1>
-	<br>
-	<h2 class="titulo" align="center">ACIDENTES NÃO ACONTECEM POR ACASO, MAS POR DESCASO!!!!</h2>
-	<br>
-	<h2 class="titulo" align="center">ALTERAR DADOS DO USUÁRIO</h2>
+
+<body class="subpage">
+
+	<!-- Header -->
+
+	<header id="header" class="alt">
+		<div class="logo"><a href="index.html">WebSite <span>by ATK
+					Company</span></a></div>
+		<a href="#menu"><span>Menu</span></a>
+	</header>
+	<!-- Nav -->
+	<nav id="menu">
+		<ul class="links">
+			<li><a href="../index.html">Home</a></li>
+			<br>
+			<li><a href="usu_cad.php">Cadastrar</a></li>
+			<li><a href="usu_alt_cons.php">Atualizar</a></li>
+			<li><a href="../login.php">Login</a></li>
+		</ul>
+	</nav>
+	<!-- Content -->
+	<!--
+            Note: To show a background image, set the "data-bg" attribute below
+            to the full filename of your image. This is used in each section to set
+            the background image.
+        -->
+	<section id="post" class="wrapper bg-img" data-bg="banner4.jpg">
+		<div class="inner">
+			<article class="box">
+				<header>
+					<center>
+						<h2>DADOS DO USUÁRIO</h2>
+						<br>
+						<div class="form-container">
+							<?php
+							$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
+							$result_usuario = "SELECT id, nome, email, senha FROM e0_usuario WHERE email='" . mysqli_real_escape_string($conn, $email) . "'";
+							$resultado_usuario = mysqli_query($conn, $result_usuario);
+							$row_usuario = mysqli_fetch_assoc($resultado_usuario);
+							?>
+							<form method="POST" name="alterar_usuario" action="usu_alt_atualiza.php">
+								<?php
+								if ($row_usuario) {
+
+
+									echo "<h1><font color='green' size='+1'>Consta na nossa base de dados o usuário</font></h1>";
+
+									echo "Para realizar a alteração preencha os campos abaixo:<br><br>";
+
+									echo "<label><strong>Nome:</strong></label>
+			<input name='nome' id='nome' type='text' placeholder=' " . $row_usuario['nome'] . "'><br>";
+
+									echo "<label><strong>E-mail:</strong></label>
+					<input name='email' id='email' type='email' placeholder=' " . $row_usuario['email'] . "'><br>";
+
+									echo "<label><strong>Senha:</strong></label>
+					<input name='senha' id'senha' type='text' placeholder=' " . $row_usuario['senha'] . "'><br>";
+
+									echo "<input type='submit' name='Atualiza' value='Atualiza'> ";
+								} else {
+									echo "<h2><font color='red' size='+2'>Usuário não existe!!!!!</font></h2>";
+								}
+								?>
+							</form>
+						</div>
+</body>
 
 </header>
-	<hr>
-	<br>
 
-<?php
-$email = filter_input(INPUT_POST,'email',FILTER_SANITIZE_STRING);
-$result_usuario = "SELECT id, nome, email, senha FROM e0_usuario WHERE email='" . mysqli_real_escape_string($conn, $email) . "'";
-$resultado_usuario = mysqli_query($conn, $result_usuario);
-$row_usuario = mysqli_fetch_assoc($resultado_usuario);
-?>
-<form method="POST" name="alterar_usuario" action="usu_alt_atualiza.php">
-<?php
-if ($row_usuario) {
-
-			
-	        echo "<h1><font color='green'>Consta na nossa base de dados o usuário</font></h1><BR>";
-
-			echo "Para realizar a alteração preencha os campos abaixo:<br><br>";
-						
-			echo "<label><strong>Nome:</strong></label>
-			<input name='nome' id='nome' type='text' placeholder=' ".$row_usuario['nome']."'><br></br>";
-			
-			echo "<label><strong>E-mail:</strong></label>
-					<input name='email' id='email' type='email' placeholder=' ".$row_usuario['email']."'><br></br>";
-
-			echo "<label><strong>Senha:</strong></label>
-					<input name='senha' id'senha' type='text' placeholder=' ".$row_usuario['senha']."'><br></br>";
-
-			echo "<input type='submit' name='Atualiza' value='Atualiza'> ";
-
-}else{
-			echo "<h2><font color='red'>usuario não existe!!!!!</font></h2>";
-}
-?>
-</form>
-<br><hr>
-	
-<a href="usuario.html"> <img src="../img/retornar.png" width="30" height="30">  </a>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<footer>
-<p style='color:#808080'>&copy; Copyright  <script>var year=new Date();document.writeln(+year.getUTCFullYear());</script></p>
-</footer>
-
-</center>
-
+</article>
+</div>
+</section>
+<div class="copyright">
+	WebSite <a>By Company ATK</a>
+</div>
+<!-- Scripts -->
+<script src="../assets/js/jquery.min.js"></script>
+<script src="../assets/js/jquery.scrolly.min.js"></script>
+<script src="../assets/js/jquery.scrollex.min.js"></script>
+<script src="../assets/js/skel.min.js"></script>
+<script src="../assets/js/util.js"></script>
+<script src="../assets/js/main.js"></script>
 </body>
+
 </html>

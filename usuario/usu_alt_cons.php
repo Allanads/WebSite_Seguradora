@@ -1,62 +1,81 @@
-<!DOCTYPE html>
-<html>
-<META charset="utf-8">
-<head>
-	<title>SEGURADORA</title>
-	<link rel="stylesheet" href="css/estilos.css">
-	<link href="formata.css" rel="stylesheet">
-</head>
-	
-<center>
-	<body>
-<header class="cabecalho">
-	<h1 class="titulo" align="center">SEGURADORA</h1>
-	<br>
-	<h2 class="titulo" align="center">ACIDENTES NÃO ACONTECEM POR ACASO, MAS POR DESCASO!!!!</h2>
-	<br>
-	<h2 class="titulo" align="center">ALTERAR DADOS DO USUÁRIO</h2>
+<?php
+session_start();
+?>
+<!DOCTYPE HTML>
+<html lang="pt">
 
-</header>
-	<hr>
-	<br>
-		 
-	 <div class="form-container">
-		<form method="post" name="consultar_usuario" action="usu_alt_cons2.php">
-			<label> E-mail </label>
-			<input type="email" name="email" maxlength="140" required placeholder="Digite seu E-mail">
-			<input type="submit" name="enviar" value="Consultar">
-		</form>
-		 </div>
-	</body>
+    <head>
+        <title>WebSite SEGURADORA ATK</title>
+        <meta charset="utf-8">
+        <meta name="robots"
+            content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../assets/css/main.css">
+    </head>
 
- <br><hr>
-	 
-<a href="usuario.html"> <img src="../img/retornar.png" width="30" height="30">  </a>
+    <body class="subpage">
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+        <!-- Header -->
 
-<footer>
-<p style='color:#808080'>&copy; Copyright  <script>var year=new Date();document.writeln(+year.getUTCFullYear());</script></p>
-</footer>
+        <header id="header" class="alt">
+            <div class="logo"><a href="index.html">WebSite <span>by ATK
+                        Company</span></a></div>
+            <a href="#menu"><span>Menu</span></a>
+        </header>
+        <!-- Nav -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="../index.html">Home</a></li>
+                <br>
+                <li><a href="usu_cad.php">Cadastrar</a></li>
+                <li><a href="usu_alt_cons.php">Atualizar</a></li>
+                <li><a href="../login.php">Login</a></li>
+            </ul>
+        </nav>
+        <!-- Content -->
+        <!--
+            Note: To show a background image, set the "data-bg" attribute below
+            to the full filename of your image. This is used in each section to set
+            the background image.
+        -->
+        <section id="post" class="wrapper bg-img" data-bg="banner4.jpg">
+            <div class="inner">
+                <article class="box">
+                    <header>
+                        <center>
+                            <h2>ALTERAR DADOS DO USUÁRIO</h2>
 
-</center>
+							<img src="images/dados3.png" alt="imagem de centro" width="270" height="270" title="Pesquisar"> <br>
 
-</body>
+                            <div class="form-container">
+                                <form method="post" name="consultar_usuario"
+                                    action="usu_alt_cons2.php">
+                                    <label><strong>E-mail:</strong></label>
+                                    <input type="email" name="email"
+                                        maxlength="140" required
+                                        placeholder="Digite seu E-mail">
+										<br>
+                                    <input type="submit" name="enviar"
+                                        value="Consultar">
+                                </form>
+                            </div>
+                        </body>
+
+                    </header>
+
+                </article>
+            </div>
+        </section>
+        <div class="copyright">
+            WebSite <a>By Company ATK</a>
+        </div>
+        <!-- Scripts -->
+        <script src="../assets/js/jquery.min.js"></script>
+        <script src="../assets/js/jquery.scrolly.min.js"></script>
+        <script src="../assets/js/jquery.scrollex.min.js"></script>
+        <script src="../assets/js/skel.min.js"></script>
+        <script src="../assets/js/util.js"></script>
+        <script src="../assets/js/main.js"></script>
+    </body>
+
 </html>

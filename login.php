@@ -26,6 +26,7 @@ include('conexao.php');
 	<nav id="menu">
 		<ul class="links">
 			<li><a href="index.html">Home</a></li>
+			<li><a href="usuario/usuario.html">Incluir e Alterar usuário</a></li>
 		</ul>
 	</nav>
 	<!-- Content -->
@@ -110,7 +111,7 @@ include('conexao.php');
 					}
 				</style>
 				<form action="usuario/usuario.html">
-					<button class="botao-azul-claro">INCLUIR USUÁRIO OU ALTERAR DADOS</button>
+					<button class="botao-azul-claro">INCLUIR OU ALTERAR USUÁRIO</button>
 				</form>
 				</center>
 			</article>
