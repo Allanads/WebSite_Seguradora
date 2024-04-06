@@ -71,7 +71,7 @@ include('conexao.php');
 									$_SESSION['user'] = $e0_usuario['id'];
 									$_SESSION['nome'] = $e0_usuario['nome'];
 
-									header("Location: home.php");
+									header("Location: home.html");
 								} else {
 									echo "<span style='color: red;'>Falha ao Logar! E-mail ou senha incorretos</span>";
 								}
@@ -96,7 +96,7 @@ include('conexao.php');
 									}
 								</style>
 
-								<a href="home.php"><button class="botao-verde">ENTRAR</button></a>
+								<a href="home.html"><button class="botao-verde">ENTRAR</button></a>
 								<br>
 
 							</form>
