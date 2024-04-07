@@ -1,5 +1,6 @@
 
 <?php
+
 session_start();
 include_once("../conexao.php");
 
@@ -12,6 +13,10 @@ $senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 
 $result_usuario = "INSERT INTO e0_usuario(id,nome,email,senha) VALUES ('$id', '$nome', '$email', '$senha')";
 $resultado_usuario = mysqli_query($conn, $result_usuario);
+
+if(!$resultado_usuario) {
+    die('Erro: ' . mysqli_error($conn));
+}
 
 
 if($conn->affected_rows == 1){

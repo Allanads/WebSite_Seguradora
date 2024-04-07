@@ -60,7 +60,7 @@ session_start();
                                 <input type="text" name="nome" maxlength="140" required placeholder="Digite seu nome"><br><br>
 
                                 <label><strong>E-mail:</strong></label>
-                                <input type="email" name="email" maxlength="320" required placeholder="Digite seu e-mail"><br><br>
+                                <input type="email" name="email" maxlength="140" required placeholder="Digite seu e-mail"><br><br>
 
                                 <label><strong>Senha:</strong></label>
                                 <input type="password" name="senha" maxlength="16" required placeholder="******"><br><br>

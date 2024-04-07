@@ -73,7 +73,7 @@ include('conexao.php');
 
 									header("Location: home.html");
 								} else {
-									echo "<span style='color: red;'>Falha ao Logar! E-mail ou senha incorretos</span>";
+									echo "<strong><span style='color: red; font-size: 18px;'>Falha ao Logar! E-mail ou senha incorretos</span></strong><br><br>";
 								}
 							}
 						}

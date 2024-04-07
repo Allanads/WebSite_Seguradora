@@ -56,7 +56,7 @@ session_start();
 				<input type="text" name="modelo" maxlength="15" required placeholder="Digite o modelo do carro"><br><br>		
 
 				<label>Ano: </label>
-				<input type="number" name="ano" maxlength="3" required placeholder="Digite o Ano do carro"><br><br>	
+				<input type="number" name="ano" maxlength="4" required placeholder="Digite o Ano do carro"><br><br>	
 
 				<input type="submit" value="INCLUIR">
 			</form>
