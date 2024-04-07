@@ -65,8 +65,9 @@ session_start();
                                 <label><strong>Senha:</strong></label>
                                 <input type="password" name="senha" maxlength="16" required placeholder="******"><br><br>
 
-                                <input type="submit" value="INCLUIR">
+                                <input type="submit" name="enviar" value="INCLUIR" style="background-color: #03ad61; color: white;">
                             </form>
+                            <a href="../login.php"><button>Voltar</button></a>
                         </div>
 
                 </header>

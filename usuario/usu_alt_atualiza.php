@@ -47,20 +47,21 @@ include_once("../conexao.php");
 
                         <div class="form-container">
                             <?php
-
-                            $nome = $_POST['nome'];
-                            $email = $_POST['email'];
-                            $senha = $_POST['senha'];
+                            $id=$_POST['id'];
+                            $email=$_POST['email'];
+                            $nome=$_POST['nome'];
+                            $senha=$_POST['senha'];
                             //UPDATE e0_usuario SET nome=1234 WHERE email="fabio@teste.com";
                             //$result_usuario = "UPDATE e0_usuario SET nome='$nome',email='$email',senha='$senha' WHERE email='$email'";
-                            $result_usuario = "UPDATE e0_usuario SET nome='garrafa',email='garrafa@teste.com',senha='1234' WHERE email='fabio@teste.com'";
-                            $resultado_usuario = mysqli_query($conn, $result_usuario);
+                            $result_cliente = "UPDATE e0_usuario SET email='$email',nome='$nome',senha='$senha' WHERE id='$id'";
+                            $resultado_cliente = mysqli_query($conn, $result_cliente);
+                            // var_dump($email);
                             echo "<h2><font color='green'>Atualizado com sucesso!</font></h2>";
 
                             ?>
                             <br>
                             <center>
-                                <form method="post" name="consultar_usuario" action="usu_alt_cons.php">
+                                <form method="post" name="consultar_usuario" action="usu_alt_cons4.php">
                                     <label>Fazer nova alteração ? </label>
                                     <input type="submit" name="voltar" value="Voltar">
                                 </form>
