@@ -11,9 +11,10 @@ Enjoy and I hope you like my project!
 Here are the technologies used in this project.
 
 * HTML5
-*CSS3
+* CSS3
 * JavaScript
-*PHP
+* PHP
+* MySQL
 
 ## Services Used
 
