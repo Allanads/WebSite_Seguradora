@@ -30,11 +30,7 @@ include('conexao.php');
 		</ul>
 	</nav>
 	<!-- Content -->
-	<!--
-            Note: To show a background image, set the "data-bg" attribute below
-            to the full filename of your image. This is used in each section to set
-            the background image.
-        -->
+
 	<section id="post" class="wrapper bg-img" data-bg="banner2.jpg">
 		<div class="inner">
 			<article class="box">

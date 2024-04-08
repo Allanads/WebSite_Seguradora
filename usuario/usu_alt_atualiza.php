@@ -33,11 +33,7 @@ include_once("../conexao.php");
         </ul>
     </nav>
     <!-- Content -->
-    <!--
-            Note: To show a background image, set the "data-bg" attribute below
-            to the full filename of your image. This is used in each section to set
-            the background image.
-        -->
+   
     <section id="post" class="wrapper bg-img" data-bg="banner4.jpg">
         <div class="inner">
             <article class="box">
@@ -51,8 +47,7 @@ include_once("../conexao.php");
                             $email=$_POST['email'];
                             $nome=$_POST['nome'];
                             $senha=$_POST['senha'];
-                            //UPDATE e0_usuario SET nome=1234 WHERE email="fabio@teste.com";
-                            //$result_usuario = "UPDATE e0_usuario SET nome='$nome',email='$email',senha='$senha' WHERE email='$email'";
+                            
                             $result_cliente = "UPDATE e0_usuario SET email='$email',nome='$nome',senha='$senha' WHERE id='$id'";
                             $resultado_cliente = mysqli_query($conn, $result_cliente);
                             // var_dump($email);

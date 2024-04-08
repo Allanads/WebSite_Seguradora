@@ -10,8 +10,7 @@ session_start();
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../assets/css/main.css">
-    <!-- ESTOU DESCONFIADO DESSAS DUAS LINHAS DE CODIGO ABAIXO POR ISSO QUE A PÁGINA AO INCLUIR NÃO NO BD E NEM
-     APARECE O CADASTRO -->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 </head>
@@ -35,11 +34,7 @@ session_start();
         </ul>
     </nav>
     <!-- Content -->
-    <!--
-            Note: To show a background image, set the "data-bg" attribute below
-            to the full filename of your image. This is used in each section to set
-            the background image.
-        -->
+
     <section id="post" class="wrapper bg-img" data-bg="banner4.jpg">
         <div class="inner">
             <article class="box">
