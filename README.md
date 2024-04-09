@@ -13,6 +13,7 @@ Here are the technologies used in this project.
 * HTML5
 * CSS3
 * JavaScript
+* Bootstrap
 * PHP
 * MySQL
 
