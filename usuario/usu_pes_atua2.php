@@ -26,10 +26,10 @@ include_once("../conexao.php");
     <nav id="menu">
         <ul class="links">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="usuario.html">Gerenciamento de Usuários</a></li>
             <li><a href="usu_cad.php">Cadastrar</a></li>
-            <li><a href="usu_alt_cons4.php">Atualizar</a></li>
-            <li><a href="usu_alt_cons5.php">Excluir</a></li>
+            <li><a href="usu_pes_usu1.php">Pesquisar</a></li>
+            <li><a href="usu_pes_atua1.php">Atualizar</a></li>
+            <li><a href="usu_pes_exclui1.php">Excluir</a></li>
             <li><a href="../login.php">Login</a></li>
         </ul>
     </nav>
@@ -44,34 +44,33 @@ include_once("../conexao.php");
 						<br>
 						<div class="form-container">
 							<?php
-							$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-							$result_usuario = "SELECT id, nome, email, senha FROM e0_usuario WHERE email='" . mysqli_real_escape_string($conn, $email) . "'";
+							$email = filter_input(INPUT_POST,'email',FILTER_SANITIZE_STRING);
+							$result_usuario = "SELECT id, nome, email, senha FROM e0_usuario WHERE email='$email'";         
 							$resultado_usuario = mysqli_query($conn, $result_usuario);
-							$row_usuario = mysqli_fetch_assoc($resultado_usuario);
+							$row_usuario;
 							?>
-							<form method="POST" name="alterar_usuario" action="usu_alt_cons2.php">
+							<form method="POST" name="alterar_usuario" action="usu_alt_atualiza.php">
 								<?php
-								if ($row_usuario) {
+								if ($row_usuario = mysqli_fetch_assoc($resultado_usuario)) {
 
+									echo "Para realizar a alteração preencha os campos abaixo:<br><br>";
 
-									echo "<h1><font color='green' size='+1'>Consta na nossa base de dados o usuário:</font></h1>";
-
-									echo "<label><strong>Nome:</strong></label>
-									<span>" . $row_usuario['nome'] . "</span><br><br>";
+									echo "<input type='hidden' name='id' value='".$row_usuario['id']."' />";
 
 									echo "<label><strong>E-mail:</strong></label>
-									<span>" . $row_usuario['email'] . "</span><br><br>";
+									<input name='email' type='email' placeholder='".$row_usuario['email']."' value='".$row_usuario['email']."'><br></br>";
+
+									echo "<label><strong>Nome:</strong></label>
+									<input name='nome' type='text' placeholder='".$row_usuario['nome']."' value='".$row_usuario['nome']."'><br></br>";
 
 									echo "<label><strong>Senha:</strong></label>
-									<span>" . $row_usuario['senha'] . "</span><br>";
+									<input name='senha' type='text' placeholder='".$row_usuario['senha']."' value='".$row_usuario['senha']."'><br></br>";
+
+									echo "<input type='submit' name='Atualiza' value='Atualiza'> ";
 								} else {
 									echo "<h2><font color='red' size='+2'>Usuário não existe!!!!!</font></h2>";
 								}
 								?>
-							</form>
-							<form action="usu_alt_cons.php">
-							<label>Deseja fazer uma nova pesquisa ? </label>
-							<button>VOLTAR </button>
 							</form>
 						</div>
 </body>

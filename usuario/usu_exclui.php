@@ -26,13 +26,12 @@ include_once("../conexao.php");
     <nav id="menu">
         <ul class="links">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="usuario.html">Gerenciamento de Usuários</a></li>
             <li><a href="usu_cad.php">Cadastrar</a></li>
-            <li><a href="usu_alt_cons.php">Pesquisar</a></li>
-            <li><a href="usu_alt_cons4.php">Atualizar</a></li>
+            <li><a href="usu_pes_usu1.php">Pesquisar</a></li>
+            <li><a href="usu_pes_atua1.php">Atualizar</a></li>
+            <li><a href="usu_pes_exclui1.php">Excluir</a></li>
             <li><a href="../login.php">Login</a></li>
         </ul>
-    </nav>
     </nav>
     <!-- Content -->
    
@@ -69,9 +68,7 @@ include_once("../conexao.php");
                             ?>
                             <br>
                                 <form method="post" name="consultar_usuario" action="../index.html">
-                                    
-                                    <label>Clique em voltar para tela inicial</label>
-                                    <input type="submit" name="voltar" value="Voltar">
+                                    <input type="submit" name="voltar" value="Voltar para tela inicial">
                                 </form>
                         </div>
 </body>
