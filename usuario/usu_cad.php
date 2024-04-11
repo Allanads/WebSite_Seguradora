@@ -27,9 +27,10 @@ session_start();
     <nav id="menu">
         <ul class="links">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="usuario.html">Preferências do usuário</a></li>
+            <li><a href="usuario.html">Gerenciamento de Usuários</a></li>
             <li><a href="usu_alt_cons.php">Pesquisar</a></li>
             <li><a href="usu_alt_cons4.php">Atualizar</a></li>
+            <li><a href="usu_alt_cons5.php">Excluir</a></li>
             <li><a href="../login.php">Login</a></li>
         </ul>
     </nav>

@@ -23,15 +23,16 @@ include_once("../conexao.php");
 		<a href="#menu"><span>Menu</span></a>
 	</header>
 	<!-- Nav -->
-	<nav id="menu">
-		<ul class="links">
-			<li><a href="../index.html">Home</a></li>
-			<br>
-			<li><a href="usu_cad.php">Cadastrar</a></li>
-			<li><a href="usu_alt_cons.php">Atualizar</a></li>
-			<li><a href="../login.php">Login</a></li>
-		</ul>
-	</nav>
+    <nav id="menu">
+        <ul class="links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="usuario.html">Gerenciamento de Usuários</a></li>
+            <li><a href="usu_cad.php">Cadastrar</a></li>
+            <li><a href="usu_alt_cons4.php">Atualizar</a></li>
+            <li><a href="usu_alt_cons5.php">Excluir</a></li>
+            <li><a href="../login.php">Login</a></li>
+        </ul>
+    </nav>
 	<!-- Content -->
 
 	<section id="post" class="wrapper bg-img" data-bg="banner4.jpg">
