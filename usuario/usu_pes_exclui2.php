@@ -26,6 +26,7 @@ include_once("../conexao.php");
     <nav id="menu">
         <ul class="links">
             <li><a href="../index.html">Home</a></li>
+            <li><a href="usuario.html">Gerenciamento de usuário</a></li>
             <li><a href="usu_cad.php">Cadastrar</a></li>
             <li><a href="usu_pes_usu1.php">Pesquisar</a></li>
             <li><a href="usu_pes_atua1.php">Atualizar</a></li>
@@ -48,7 +49,7 @@ include_once("../conexao.php");
                             $resultado_usuario = mysqli_query($conn, $result_usuario);
                             $row_usuario = mysqli_fetch_assoc($resultado_usuario);
                             ?>
-                            <form method="POST" action="usu_alt_exclui.php">
+                            <form method="POST" action="usu_exclui.php">
 
                                 <?php
                                 if ($row_usuario) {
@@ -61,7 +62,7 @@ include_once("../conexao.php");
                                     <span>" . $row_usuario['email'] . "</span><br><br>";
 
                                     echo "<label><strong>Senha:</strong></label>
-                                    <span>" . $row_usuario['senha'] . "</span><br>";
+                                    <span>" . $row_usuario['senha'] . "</span><br><br><br>";
                                     
                                     // Mostra o botão "Excluir" apenas se o usuário for encontrado
                                     echo "<input type='hidden' name='id_usuario' value='" . $row_usuario['id'] . "'>";
@@ -69,7 +70,7 @@ include_once("../conexao.php");
                                     echo "<button type='submit'>EXCLUIR</button>";
                                 } else {
                                     echo "<h2><font color='red' size='+2'>Usuário não existe!!!!!</font></h2>";
-                                    echo "<br><a href='usu_alt_cons5.php'><button type='button'>Voltar para Pesquisa</button></a>";
+                                    echo "<br><a href='usu_pes_exclui1.php'><button type='button'>Voltar para Pesquisa</button></a>";
                                 }
                                 ?>
                                 <br>

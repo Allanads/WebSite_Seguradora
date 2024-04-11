@@ -26,6 +26,7 @@ include_once("../conexao.php");
     <nav id="menu">
         <ul class="links">
             <li><a href="../index.html">Home</a></li>
+			<li><a href="usuario.html">Gerenciamento de usuário</a></li>
             <li><a href="usu_cad.php">Cadastrar</a></li>
             <li><a href="usu_pes_usu1.php">Pesquisar</a></li>
             <li><a href="usu_pes_atua1.php">Atualizar</a></li>
@@ -49,7 +50,7 @@ include_once("../conexao.php");
 							$resultado_usuario = mysqli_query($conn, $result_usuario);
 							$row_usuario;
 							?>
-							<form method="POST" name="alterar_usuario" action="usu_alt_atualiza.php">
+							<form method="POST" name="alterar_usuario" action="usu_atualiza.php">
 								<?php
 								if ($row_usuario = mysqli_fetch_assoc($resultado_usuario)) {
 

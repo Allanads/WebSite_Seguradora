@@ -27,7 +27,7 @@ session_start();
     <nav id="menu">
         <ul class="links">
             <li><a href="../index.html">Home</a></li>
-            <li><a href="usu_cad.php">Cadastrar</a></li>
+            <li><a href="usuario.html">Gerenciamento de usuário</a></li>
             <li><a href="usu_pes_usu1.php">Pesquisar</a></li>
             <li><a href="usu_pes_atua1.php">Atualizar</a></li>
             <li><a href="usu_pes_exclui1.php">Excluir</a></li>
@@ -51,7 +51,7 @@ session_start();
                         ?>
 
                         <div class="form-container">
-                            <form method="POST" action="usu_pro.php">
+                            <form method="POST" action="usu_cad1.php">
                                 <label><strong>Nome:</strong></label>
                                 <input type="text" name="nome" maxlength="140" required placeholder="Digite seu nome"><br><br>
 

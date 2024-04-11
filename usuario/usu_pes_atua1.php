@@ -26,9 +26,9 @@ session_start();
     <nav id="menu">
         <ul class="links">
             <li><a href="../index.html">Home</a></li>
+            <li><a href="usuario.html">Gerenciamento de usuário</a></li>
             <li><a href="usu_cad.php">Cadastrar</a></li>
             <li><a href="usu_pes_usu1.php">Pesquisar</a></li>
-            <li><a href="usu_pes_atua1.php">Atualizar</a></li>
             <li><a href="usu_pes_exclui1.php">Excluir</a></li>
             <li><a href="../login.php">Login</a></li>
         </ul>
@@ -46,7 +46,7 @@ session_start();
 
                             <div class="form-container">
                                 <form method="post" name="consultar_usuario"
-                                    action="usu_alt_cons2.php">
+                                    action="usu_pes_atua2.php">
                                     <label><strong>E-mail:</strong></label>
                                     <input type="email" name="email"
                                         maxlength="140" required

@@ -57,7 +57,7 @@ include_once("../conexao.php");
                             ?>
                             <br>
                             <center>
-                                <form method="post" name="consultar_usuario" action="usu_alt_cons4.php">
+                                <form method="post" name="consultar_usuario" action="usu_pes_atua1.php">
                                     <label>Fazer nova alteração ? </label>
                                     <input type="submit" name="voltar" value="Voltar">
                                 </form>
