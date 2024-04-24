@@ -1,29 +1,37 @@
-<?php
-session_start();
-?>
-<!DOCTYPE html>
-<html>
-<META charset="utf-8">
+<!DOCTYPE HTML>
+<html lang="pt">
+
 <head>
-	<title>SEGURADORA</title>
-	<link rel="stylesheet" href="css/estilos.css">
-	<link href="formata.css" rel="stylesheet">
+    <title>WebSite Seguradora ATK</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
-	
-<center>
-<header class="cabecalho">
-	<h1 class="titulo" align="center">SEGURADORA</h1>
-	<br>
-	<h2 class="titulo" align="center">ACIDENTES NÃO ACONTECEM POR ACASO, MAS POR DESCASO!!!!</h2>
-	<br>
-	<h2 class="titulo" align="center">PESQUISA PARA EXCLUSÃO DE CLIENTES</h2>
+<body class="is-preload">
 
-</header>
-	<hr>
-	<br>
+    <!-- Wrapper -->
+    <div id="wrapper">
 
-		<?php
+        <!-- Adicionando botões no topo da página -->
+        <div id="top-buttons">
+            <button onclick="window.location.href='../home.html'">Tela Inicial</button>
+            <button onclick="window.location.href='cliente.html'">Voltar</button>
+            <button onclick="window.location.href='../index.html'">Sair</button>
+        </div>
+        <br>
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <span class="icon fa-user"></span>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>Buscar cliente para exclusão</h1>
+        </header>
+        </h1>
+        <?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg'];
 			unset($_SESSION['msg']);
@@ -31,41 +39,31 @@ session_start();
 ?>
  <div class="form-container">
 <FORM method="POST" action="cli_del_pro.php">
-	<label> Código: </label>
-	<input type="number" name="cod" required placeholder="Digite o código do Cliente que deseja excluir">
+	<label> Digite o código: </label>
+	<input type="text" name="cod" required placeholder="Digite o código do Cliente que deseja excluir"><br>
 	<input type="submit" name="Consultar">
 </FORM>
 </div>
 
-<br><hr>
+        </header>
 
-<a href="cliente.html"> <img src="../img/retornar.png" width="30" height="30">  </a>
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright"> WebSite By Company ATK</p>
+        </footer>
 
+        </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+        <!-- BG -->
+        <div id="bg"></div>
 
-<footer>
-<p style='color:#808080'>&copy; Copyright  <script>var year=new Date();document.writeln(+year.getUTCFullYear());</script></p>
-</footer>
-
-</center>
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
