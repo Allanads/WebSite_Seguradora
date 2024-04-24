@@ -69,8 +69,6 @@
                     <input type="submit" value="INCLUIR">
                 </form>
             </div>
-                </div>
-            </div>
         </header>
 
         <!-- Footer -->
