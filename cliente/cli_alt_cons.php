@@ -31,6 +31,7 @@
                     <h1>Buscar clientes para alteração</h1>
         </header>
         </h1>
+        <br>
         <div class="form-container">
             <form method="post" name="consultar_cliente" action="cli_alt_cons2.php">
                 <label> Digite o código </label>

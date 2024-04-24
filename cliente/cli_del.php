@@ -37,6 +37,7 @@
 			unset($_SESSION['msg']);
 		}
 ?>
+<br>
  <div class="form-container">
 <FORM method="POST" action="cli_del_pro.php">
 	<label> Digite o código: </label>
