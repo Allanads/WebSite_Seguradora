@@ -38,18 +38,17 @@ include_once("../conexao.php");
         <br>
 
         <?php
-		$cod=$_POST['cod'];
+		
 		$nome=$_POST['nome'];
 		$rg=$_POST['rg'];
 		$cpf=$_POST['cpf'];
-		$tel=$_POST['tel'];
+		
 
-		$result_cliente = "UPDATE e1_cliente SET cod='$cod',nome='$nome',rg='$rg',cpf='$cpf',tel='$tel' WHERE cod='$cod'";
+		$result_cliente = "UPDATE e1_cliente SET nome='$nome',rg='$rg',cpf='$cpf' WHERE nome='$nome'";
 		$resultado_cliente = mysqli_query($conn, $result_cliente);
 		echo "<h2><font color='green'>Atualizado com sucesso!</font></h2>";
 
 	?>
-	<br>
 	<center>
 <form method="post" name="consultar_cliente" action="cli_alt_cons.php">
 	<label>Fazer nova alteração ? </label>
@@ -78,3 +77,4 @@ include_once("../conexao.php");
 </body>
 
 </html>
+

@@ -1,3 +1,7 @@
+<?php
+session_start();
+include_once("../conexao.php")
+?>
 <!DOCTYPE HTML>
 <html lang="pt">
 
@@ -36,7 +40,7 @@
                 <form method="POST" action="cli_cons2_pro.php">
                     <label>DIGITE O CÓDIGO PARA BUSCAR OS DADOS DO CLIENTE: </label>
                     <center>
-					<input type="text" required name="cod" placeholder="Digite o código do cliente"><br>
+					<input type="text" required name="nome" placeholder="Digite o nome do cliente"><br>
                     <input type="submit" name="Consultar" value="Consultar">
                 </form>
              </div>

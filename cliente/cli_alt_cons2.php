@@ -39,37 +39,29 @@ include_once("../conexao.php");
 
         <?php
 $cod = filter_input(INPUT_POST,'cod',FILTER_SANITIZE_STRING);
-$result_cliente = "SELECT cod,nome,rg,cpf,tel FROM e1_cliente WHERE cod=$cod";
+$result_cliente = "SELECT cod, nome, cpf, rg FROM e1_cliente WHERE cod=$cod";
 $resultado_cliente = mysqli_query($conn, $result_cliente);
-$row_cliente;
+$row_veiculo;
 ?>
 <form method="POST" name="alterar_cliente" action="cli_alt_atualiza.php">
 <?php
 if ($row_cliente = mysqli_fetch_assoc($resultado_cliente)) {
 
+            echo "<div style='text-align: center;'>CONSTA NA NOSSA BASE DE DADOS O CLIENTE:<BR></div>";
+
+			echo "<h4>Para realizar a alteração preencha os campos abaixo:</font></h4>";
 			
-	        echo "CONSTA NA NOSSA BASE DE DADOS O CLIENTE:<BR>";
-
-			echo "<h1><font color='green'>Para realizar a alteração preencha os campos abaixo:</font></h1><BR>";
-
-
-			echo "<label>código....:</label>
-					<input name='cod' type='number' placeholder=' ".$row_cliente['cod']."'><br></br>";
+			echo "<label>Nome:</label>
+					<input name='nome' type='text' placeholder=' ".$row_cliente['nome']."'><br>";
 			
-			echo "<label>Nome......:</label>
-					<input name='nome' type='text' placeholder=' ".$row_cliente['nome']."'><br></br>";
-			
-			echo "<label>CPF.......:</label>
-					<input name='cpf' type='number' placeholder=' ".$row_cliente['cpf']."'><br></br>";
+			echo "<label>CPF:</label>
+					<input name='cpf' type='text' placeholder=' ".$row_cliente['cpf']."'><br>";
 
-			echo "<label>RG........:</label>
-					<input name='rg' type='number' placeholder=' ".$row_cliente['rg']."'><br></br>";
-
-			echo "<label>Telefone..:</label>
-					<input name='tel' type='number' placeholder=' ".$row_cliente['tel']."'><br></br>";
+			echo "<label>RG:</label>
+					<input name='rg' type='text' placeholder=' ".$row_cliente['rg']."'><br>";
 
 			echo "<input type='submit' name='Atualiza' value='Atualiza'> ";
-
+        
 }else{
 			echo "<h2><font color='red'>Cliente não existe!!!!!</font></h2>";
 }

@@ -39,19 +39,27 @@ include_once("../conexao.php");
 
         <?php
 
-$cod = filter_input(INPUT_POST,'cod',FILTER_SANITIZE_NUMBER_INT);
-$result_cliente = "SELECT cod,nome,cpf,rg,tel FROM e1_cliente WHERE cod=$cod";
-$resultado_cliente = mysqli_query($conn, $result_cliente);
+$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING); // Correção: FILTER_SANITIZE_NUMBER_INT alterado para FILTER_SANITIZE_STRING para tratar como string
+
+// Utilizando prepared statement para evitar injeção de SQL
+$result_cliente = "SELECT cod, nome, cpf, rg, tel FROM e1_cliente WHERE nome = ?"; // Correção: Adicionado o ? como marcador de posição para o valor do nome
+$stmt = mysqli_prepare($conn, $result_cliente); // Preparando a consulta
+mysqli_stmt_bind_param($stmt, "s", $nome); // Vinculando o valor do nome ao marcador de posição na consulta
+mysqli_stmt_execute($stmt); // Executando a consulta
+$resultado_cliente = mysqli_stmt_get_result($stmt); // Obtendo o resultado da consulta
 
 if ($row_cliente = mysqli_fetch_assoc($resultado_cliente)) {
-	echo "<strong>Código:</strong> ".$row_cliente['cod']."<br>";
-	echo "<strong>Nome:</strong> ".$row_cliente['nome']."<br>";
-	echo "<strong>CPF:</strong> ".$row_cliente['cpf']."<br>";
-	echo "<strong>RG:</strong> ".$row_cliente['rg']."<br>";
-	echo "<strong>Telefone:</strong> ".$row_cliente['tel']."<br><br>";
-}else{
-	echo "Cliente não existe!!!!";
+    echo "<strong>Código:</strong> " . $row_cliente['cod'] . "<br>";
+    echo "<strong>Nome:</strong> " . $row_cliente['nome'] . "<br>";
+    echo "<strong>CPF:</strong> " . $row_cliente['cpf'] . "<br>";
+    echo "<strong>RG:</strong> " . $row_cliente['rg'] . "<br>";
+    echo "<strong>Telefone:</strong> " . $row_cliente['tel'] . "<br><br>";
+} else {
+    echo "<span style='color: red; font-size: larger; font-weight: bold;'>Cliente não existe!!!!</span>";
 }
+
+
+
 ?>
 
         </header>
