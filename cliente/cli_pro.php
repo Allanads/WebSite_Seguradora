@@ -3,14 +3,14 @@
 session_start();
 include_once("../conexao.php");
 
-
+$cod = filter_input(INPUT_POST, 'cod', FILTER_SANITIZE_NUMBER_INT);
 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
 $cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_STRING);
 $rg = filter_input(INPUT_POST, 'rg', FILTER_SANITIZE_STRING);
-$tel = filter_input(INPUT_POST, 'tel', FILTER_SANITIZE_STRING);
 
 
-$result_cliente = "INSERT INTO e1_cliente(nome,cpf,rg,tel) VALUES ('$nome', '$cpf','$rg','$tel')";
+
+$result_cliente = "INSERT INTO e1_cliente(cod,nome,cpf,rg,tel) VALUES ('$cod','$nome', '$cpf','$rg','$tel')";
 $resultado_cliente = mysqli_query($conn, $result_cliente);
 
 
