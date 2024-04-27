@@ -38,13 +38,12 @@ include_once("../conexao.php");
         <br>
 
         <?php
-		
+		$cod=$_POST['cod'];
 		$nome=$_POST['nome'];
 		$rg=$_POST['rg'];
 		$cpf=$_POST['cpf'];
 		
-
-		$result_cliente = "UPDATE e1_cliente SET nome='$nome',rg='$rg',cpf='$cpf' WHERE nome='$nome'";
+		$result_cliente = "UPDATE e1_cliente SET cod='$cod',nome='$nome',rg='$rg',cpf='$cpf' WHERE cod='$cod'";
 		$resultado_cliente = mysqli_query($conn, $result_cliente);
 		echo "<h2><font color='green'>Atualizado com sucesso!</font></h2>";
 

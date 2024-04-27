@@ -33,59 +33,59 @@ include_once("../conexao.php");
             <div class="content">
                 <div class="inner">
                     <h1>Buscar clientes</h1>
+                </div>
+            </div>
         </header>
-        </h1>
         <br>
 
         <?php
-$cod = filter_input(INPUT_POST,'cod',FILTER_SANITIZE_STRING);
-$result_cliente = "SELECT cod, nome, cpf, rg FROM e1_cliente WHERE cod=$cod";
-$resultado_cliente = mysqli_query($conn, $result_cliente);
-$row_veiculo;
-?>
-<form method="POST" name="alterar_cliente" action="cli_alt_atualiza.php">
-<?php
-if ($row_cliente = mysqli_fetch_assoc($resultado_cliente)) {
+        $cod = filter_input(INPUT_POST, 'cod', FILTER_SANITIZE_STRING);
+        $result_cliente = "SELECT cod, nome, cpf, rg FROM e1_cliente WHERE cod='$cod'";
+        $resultado_cliente = mysqli_query($conn, $result_cliente);
+        $row_cliente = mysqli_fetch_assoc($resultado_cliente);
+        ?>
 
-            echo "<div style='text-align: center;'>CONSTA NA NOSSA BASE DE DADOS O CLIENTE:<BR></div>";
+        <form method="POST" name="alterar_cliente" action="cli_alt_atualiza.php">
+            <?php
+            if ($row_cliente) {
+                echo "<div style='text-align: center;'>CONSTA NA NOSSA BASE DE DADOS O CLIENTE:<BR></div>";
+                echo "<h4>Para realizar a alteração preencha os campos abaixo:</font></h4>";
 
-			echo "<h4>Para realizar a alteração preencha os campos abaixo:</font></h4>";
-			
-			echo "<label>Nome:</label>
-					<input name='nome' type='text' placeholder=' ".$row_cliente['nome']."'><br>";
-			
-			echo "<label>CPF:</label>
-					<input name='cpf' type='text' placeholder=' ".$row_cliente['cpf']."'><br>";
+                echo "<label>cod:</label>
+                <input name='cod' type='text' value='" . $row_cliente['cod'] . "' readonly><br>";
 
-			echo "<label>RG:</label>
-					<input name='rg' type='text' placeholder=' ".$row_cliente['rg']."'><br>";
+                echo "<label>Nome:</label>
+                <input name='nome' type='text' value='" . $row_cliente['nome'] . "'><br>";
 
-			echo "<input type='submit' name='Atualiza' value='Atualiza'> ";
-        
-}else{
-			echo "<h2><font color='red'>Cliente não existe!!!!!</font></h2>";
-}
-?>
-</form>
+                echo "<label>CPF:</label>
+                <input name='cpf' type='text' value='" . $row_cliente['cpf'] . "'><br>";
 
-        </header>
+                echo "<label>RG:</label>
+                <input name='rg' type='text' value='" . $row_cliente['rg'] . "'><br>";
+
+                echo "<input type='submit' name='Atualiza' value='Atualiza'> ";
+            } else {
+                echo "<h2><font color='red'>Cliente não existe!!!!!</font></h2>";
+            }
+            ?>
+        </form>
 
         <!-- Footer -->
         <footer id="footer">
             <p class="copyright"> WebSite By Company ATK</p>
         </footer>
 
-        </div>
+    </div>
 
-        <!-- BG -->
-        <div id="bg"></div>
+    <!-- BG -->
+    <div id="bg"></div>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 
