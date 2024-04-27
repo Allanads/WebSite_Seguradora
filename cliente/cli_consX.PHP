@@ -43,7 +43,7 @@ include_once("../conexao.php");
 			unset($_SESSION['msg']);
 		}
 
-		$result_cliente="SELECT cod,nome,cpf,rg,tel from e1_cliente";
+		$result_cliente="SELECT cod,nome,cpf,rg from e1_cliente";
 		$resultado_cliente = mysqli_query($conn,$result_cliente);
 
 	while($row_cliente = mysqli_fetch_assoc($resultado_cliente)){
@@ -51,7 +51,6 @@ include_once("../conexao.php");
 	echo "<strong>Nome:</strong> ".$row_cliente['nome']."<br>";
 	echo "<strong>CPF:</strong> ".$row_cliente['cpf']."<br>";
 	echo "<strong>RG:</strong> ".$row_cliente['rg']."<br>";
-	echo "<strong>Telefone:</strong> ".$row_cliente['tel']."<br><br>";
     echo "<hr><br>";
 	}
 ?>

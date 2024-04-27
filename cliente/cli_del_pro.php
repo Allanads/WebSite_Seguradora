@@ -1,7 +1,26 @@
 <?php
 session_start();
 include_once("../conexao.php");
+
+if(isset($_POST['nome'])) {
+    $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+    $result_cliente = "DELETE FROM e1_cliente WHERE nome = '$nome'";
+    $resultado_cliente = mysqli_query($conn, $result_cliente);
+
+    if ($resultado_cliente) {
+        if (mysqli_affected_rows($conn) > 0) {
+            $_SESSION['msg'] = "<h2><font color='green'>Cliente apagado com sucesso!!!</font></h2>";
+        } else {
+            $_SESSION['msg'] = "<h2><font color='red'>Cliente não encontrado.</font></h2>";
+        }
+    } else {
+        $_SESSION['msg'] = "<h2><font color='red'>Erro ao excluir cliente: " . mysqli_error($conn) . "</font></h2>";
+    }
+    header("Location: cli_del_pro.php"); // Substitua 'sua_pagina.php' pelo nome do seu arquivo PHP atual
+    exit();
+}
 ?>
+
 <!DOCTYPE HTML>
 <html lang="pt">
 
@@ -35,30 +54,13 @@ include_once("../conexao.php");
                     <h1>Buscar clientes</h1>
         </header>
         </h1>
-        <br>
 
         <?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg'];
 			unset($_SESSION['msg']);
 		}
-
-$cod = filter_input(INPUT_POST, 'cod',FILTER_SANITIZE_NUMBER_INT);
-$result_cliente = "DELETE FROM e1_cliente WHERE cod=$cod";
-$resultado_cliente = mysqli_query($conn,$result_cliente);
-
-
-if (mysqli_affected_rows($conn)) 
-{
- echo "<h2><font color='green'>Cliente apagado com sucesso!!!</font></h2>";
-}
-else
-{
- echo "<h2><font color='red'>Cliente não existe?!</font></h2>";
-}
-
-
-?>
+		?>
 
         </header>
 

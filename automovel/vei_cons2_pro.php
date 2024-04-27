@@ -40,13 +40,13 @@ include_once("../conexao.php");
 
         <?php
         // Recebe o código do veículo via POST
-        $cod = filter_input(INPUT_POST,'cod',FILTER_SANITIZE_STRING);
+        $placa = filter_input(INPUT_POST,'placa',FILTER_SANITIZE_STRING);
 
         // Escapa o código para evitar injeção de SQL
         $cod = mysqli_real_escape_string($conn, $cod);
 
         // Consulta SQL
-        $result_veiculo = "SELECT cod,placa,renavan,fabricante,modelo,ano FROM e2_veiculos WHERE cod='$cod'";
+        $result_veiculo = "SELECT cod,placa,renavan,fabricante,modelo,ano FROM e2_veiculos WHERE placa='$placa'";
         $resultado_veiculo = mysqli_query($conn, $result_veiculo);
 
         // Verifica se a consulta retornou algum resultado

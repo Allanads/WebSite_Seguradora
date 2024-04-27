@@ -28,14 +28,14 @@
             </div>
             <div class="content">
                 <div class="inner">
-                    <h1>Buscar veículo para alteração</h1>
+                    <h1>Buscar veículo para exclusão</h1>
         </header>
         </h1>
         <br>
         <div class="form-container">
             <form method="post" name="consultar_veiculo" action="vei_alt_cons2.php">
-                <label> Digite o código do veículo </label>
-                <input type="text" required name="cod" placeholder="Digite o código do veículo"><br>
+                <label> Digite a placa do veículo </label>
+                <input type="text" required name="placa" placeholder="Digite a placa do veículo"><br>
                 <center>
                 <input type="submit" name="enviar" value="Consultar"> 
             </form>

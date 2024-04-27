@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once("../conexao.php")
+include_once("../conexao.php");
 ?>
 <!DOCTYPE HTML>
 <html lang="pt">
@@ -38,9 +38,9 @@ include_once("../conexao.php")
 			<br>
             <div class="form-container">
                 <form method="POST" action="vei_cons2_pro.php">
-                    <label>DIGITE O CÓDIGO PARA BUSCAR OS DADOS DO VEÍCULO: </label>
+                    <label>DIGITE A PLACA PARA BUSCAR OS DADOS DO VEÍCULO: </label>
                     <center>
-					<input type="text" required name="cod" placeholder="Digite o código do veículo"><br>
+					<input type="text" required name="placa" placeholder="Digite a placa do veículo"><br>
                     <input type="submit" name="Consultar" value="Consultar">
                 </form>
              </div>

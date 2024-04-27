@@ -44,9 +44,10 @@ session_start();
 <br>
  <div class="form-container">
 <FORM method="POST" action="cli_del_pro.php">
-	<label> Digite o código: </label>
-	<input type="text" name="cod" required placeholder="Digite o código do Cliente que deseja excluir"><br>
-	<input type="submit" name="Consultar">
+	<label> Digite o nome do cliente para exclusão: </label>
+	<input type="text" name="nome" required placeholder="Digite o nome do Cliente que deseja excluir"><br>
+    <center>
+	<input type="submit" name="excluir" value="Excluir">
 </FORM>
 </div>
 

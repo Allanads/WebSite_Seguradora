@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include_once("../conexao.php");
 ?>
 <!DOCTYPE HTML>
 <html lang="pt">
@@ -28,46 +28,47 @@ session_start();
         <!-- Header -->
         <header id="header">
             <div class="logo">
-            <span class="icon"><i class="fas fa-car-side"></i></span>
+                <span class="icon"><i class="fas fa-car-side"></i></span>
             </div>
             <div class="content">
                 <div class="inner">
                     <h1>Buscar veículo para exclusão</h1>
+                </div>
+            </div>
         </header>
-        </h1>
         <?php
-		if(isset($_SESSION['msg'])){
-			echo $_SESSION['msg'];
-			unset($_SESSION['msg']);
-		}
-?>
-<br>
-<div class="form-container">
-    <FORM method="POST" action="vei_del_pro.php">
-        <label> Código: </label>
-        <input type="number" name="cod" placeholder="Digite o código do Veúculo que deseja excluir">
-        <input type="submit" name="Consultar">
-    </FORM>
-    </div>
-
-        </header>
+        // Verifica se existe uma mensagem para exibir
+        if(isset($_SESSION['msg'])){
+            echo $_SESSION['msg'];
+            unset($_SESSION['msg']);
+        }
+        ?>
+        <br>
+        <div class="form-container">
+            <form method="POST" action="vei_del_pro.php">
+                <label>Digite a placa do veículo para exclusão:</label>
+                <input type="text" name="placa" placeholder="Digite a placa do veículo que deseja excluir" maxlength="8"><br>
+                <center>
+                <input type="submit" name="Excluir" value="Excluir">
+            </form>
+        </div>
 
         <!-- Footer -->
         <footer id="footer">
             <p class="copyright"> WebSite By Company ATK</p>
         </footer>
 
-        </div>
+    </div>
 
-        <!-- BG -->
-        <div id="bg"></div>
+    <!-- BG -->
+    <div id="bg"></div>
 
-        <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 

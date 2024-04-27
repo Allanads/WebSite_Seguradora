@@ -34,8 +34,8 @@
         <br>
         <div class="form-container">
             <form method="post" name="consultar_cliente" action="cli_alt_cons2.php">
-                <label> Digite o código do cliente </label>
-                <input type="text" required name="cod" placeholder="Digite o código do cliente"><br>
+                <label> Digite o nome do cliente </label>
+                <input type="text" required name="nome" placeholder="Digite o nome do cliente"><br>
                 <center>
                 <input type="submit" name="enviar" value="Consultar"> 
             </form>

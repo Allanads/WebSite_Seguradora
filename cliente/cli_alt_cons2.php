@@ -39,8 +39,8 @@ include_once("../conexao.php");
         <br>
 
         <?php
-        $cod = filter_input(INPUT_POST, 'cod', FILTER_SANITIZE_STRING);
-        $result_cliente = "SELECT cod, nome, cpf, rg FROM e1_cliente WHERE cod='$cod'";
+        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+        $result_cliente = "SELECT cod, nome, cpf, rg FROM e1_cliente WHERE nome='$nome'";
         $resultado_cliente = mysqli_query($conn, $result_cliente);
         $row_cliente = mysqli_fetch_assoc($resultado_cliente);
         ?>
@@ -58,10 +58,10 @@ include_once("../conexao.php");
                 <input name='nome' type='text' value='" . $row_cliente['nome'] . "'><br>";
 
                 echo "<label>CPF:</label>
-                <input name='cpf' type='text' value='" . $row_cliente['cpf'] . "'><br>";
+                <input name='cpf' type='text' value='" . $row_cliente['cpf'] . "' maxlength='11'><br>";
 
                 echo "<label>RG:</label>
-                <input name='rg' type='text' value='" . $row_cliente['rg'] . "'><br>";
+                <input name='rg' type='text' value='" . $row_cliente['rg'] . "' maxlength='10'><br>";
 
                 echo "<input type='submit' name='Atualiza' value='Atualiza'> ";
             } else {

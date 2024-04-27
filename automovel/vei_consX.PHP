@@ -43,7 +43,7 @@ include_once("../conexao.php");
                 </div>
         </header>
         </h1>
-        
+        <br>
         <?php
         $result_veiculo = "SELECT cod,placa,renavan,fabricante,modelo,ano FROM e2_veiculos";
         $resultado_veiculo = mysqli_query($conn, $result_veiculo);

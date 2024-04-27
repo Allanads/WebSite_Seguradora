@@ -1,6 +1,24 @@
 <?php
 session_start();
 include_once("../conexao.php");
+
+if(isset($_POST['placa'])) {
+    $placa = filter_input(INPUT_POST, 'placa', FILTER_SANITIZE_STRING);
+    $result_veiculo = "DELETE FROM e2_veiculos WHERE placa = '$placa'";
+    $resultado_veiculo = mysqli_query($conn, $result_veiculo);
+
+    if ($resultado_veiculo) {
+        if (mysqli_affected_rows($conn) > 0) {
+            $_SESSION['msg'] = "<h2><font color='green'>Veículo apagado com sucesso!!!</font></h2>";
+        } else {
+            $_SESSION['msg'] = "<h2><font color='red'>Veículo não encontrado.</font></h2>";
+        }
+    } else {
+        $_SESSION['msg'] = "<h2><font color='red'>Erro ao excluir veículo: " . mysqli_error($conn) . "</font></h2>";
+    }
+    header("Location: vei_del_pro.php"); // Substitua 'sua_pagina.php' pelo nome do seu arquivo PHP atual
+    exit();
+}
 ?>
 <!DOCTYPE HTML>
 <html lang="pt">
@@ -35,29 +53,14 @@ include_once("../conexao.php");
                     <h1>Buscar veículo</h1>
         </header>
         </h1>
-        <br>
+        
 
         <?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg'];
 			unset($_SESSION['msg']);
 		}
-$cod = filter_input(INPUT_POST, 'cod',FILTER_SANITIZE_NUMBER_INT);
-$result_veiculo = "DELETE FROM e2_veiculos WHERE cod=$cod";
-$resultado_veiculo = mysqli_query($conn,$result_veiculo);
-
-
-if (mysqli_affected_rows($conn)) 
-{
-echo "<h2><p style='color:green;'> Veiculo apagado com sucesso!!!!!</p></h2>";
-}
-else
-{
-echo "<h2><p style='color:red;'> Veiculo não existe!!!!!</p></h2>";
-}
-
-
-?>
+        ?>
 
         </header>
 
