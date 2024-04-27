@@ -32,7 +32,7 @@ include_once("../conexao.php");
             </div>
             <div class="content">
                 <div class="inner">
-                    <h1>Buscar clientes</h1>
+                    <h1>Buscar cliente</h1>
                 </div>
             </div>
         </header>
@@ -48,10 +48,10 @@ include_once("../conexao.php");
         <form method="POST" name="alterar_cliente" action="cli_alt_atualiza.php">
             <?php
             if ($row_cliente) {
-                echo "<div style='text-align: center;'>CONSTA NA NOSSA BASE DE DADOS O CLIENTE:<BR></div>";
+                echo "<div style='text-align: center;'>CONSTA NA NOSSA BASE DE DADOS O CLIENTE<br><br></div>";
                 echo "<h4>Para realizar a alteração preencha os campos abaixo:</font></h4>";
 
-                echo "<label>cod:</label>
+                echo "<label>Código:</label>
                 <input name='cod' type='text' value='" . $row_cliente['cod'] . "' readonly><br>";
 
                 echo "<label>Nome:</label>

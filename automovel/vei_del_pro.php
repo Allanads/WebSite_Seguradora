@@ -2,27 +2,42 @@
 session_start();
 include_once("../conexao.php");
 ?>
-<!DOCTYPE html>
-<html>
-<META charset="utf-8">
-<head>
-	<title>SEGURADORA</title>
-	<link rel="stylesheet" href="css/estilos.css">
-	<link href="formata.css" rel="stylesheet">
-</head>
-	
-<center>
-<header class="cabecalho">
-	<h1 class="titulo" align="center">SEGURADORA</h1>
-	<br>
-	<h2 class="titulo" align="center">ACIDENTES NÃO ACONTECEM POR ACASO, MAS POR DESCASO!!!!</h2>
-	<br>
-	<h2 class="titulo" align="center">EXCLUSÃO DE VEÍCULOS</h2>
+<!DOCTYPE HTML>
+<html lang="pt">
 
-</header>
-	<hr>
-	<br>
-		<?php
+<head>
+    <title>WebSite Seguradora ATK</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Adicionando botões no topo da página -->
+        <div id="top-buttons">
+            <button onclick="window.location.href='../home.html'">Tela Inicial</button>
+            <button onclick="window.location.href='automovel.html'">Voltar</button>
+            <button onclick="window.location.href='../index.html'">Sair</button>
+        </div>
+        <br>
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+            <span class="icon"><i class="fas fa-car-side"></i></span>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>Buscar veículo</h1>
+        </header>
+        </h1>
+        <br>
+
+        <?php
 		if(isset($_SESSION['msg'])){
 			echo $_SESSION['msg'];
 			unset($_SESSION['msg']);
@@ -34,44 +49,35 @@ $resultado_veiculo = mysqli_query($conn,$result_veiculo);
 
 if (mysqli_affected_rows($conn)) 
 {
- echo "<h2><p style='color:green;'> Veiculo apagado com sucesso!!!!!</p></h2>";
+echo "<h2><p style='color:green;'> Veiculo apagado com sucesso!!!!!</p></h2>";
 }
 else
 {
- echo "<h2><p style='color:red;'> Veiculo não existe!!!!!</p></h2>";
+echo "<h2><p style='color:red;'> Veiculo não existe!!!!!</p></h2>";
 }
 
 
 ?>
 
-<br><hr>
-	 
-<a href="automovel.html"> <img src="../img/retornar.png" width="30" height="30">  </a>
+        </header>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright"> WebSite By Company ATK</p>
+        </footer>
 
-<footer>
-<p style='color:#808080'>&copy; Copyright  <script>var year=new Date();document.writeln(+year.getUTCFullYear());</script></p>
-</footer>
+        </div>
 
-</center>
+        <!-- BG -->
+        <div id="bg"></div>
+
+        <!-- Scripts -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/browser.min.js"></script>
+        <script src="assets/js/breakpoints.min.js"></script>
+        <script src="assets/js/util.js"></script>
+        <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>

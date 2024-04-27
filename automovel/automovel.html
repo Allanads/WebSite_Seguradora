@@ -1,71 +1,63 @@
-<!DOCTYPE html>
-<html>
-<META charset="utf-8">
+<!DOCTYPE HTML>
+<html lang="pt">
 
 <head>
-    <title>SEGURADORA</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <link href="formata.css" rel="stylesheet">
+    <title>WebSite Seguradora ATK</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
-<center>
-    <header class="cabecalho">
-        <h1 class="titulo" align="center">SEGURADORA</h1>
+<body class="is-preload">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+        <!-- Adicionando botões no topo da página -->
+        <div id="top-buttons">
+            <button onclick="window.location.href='../home.html'">Tela Inicial</button>
+            <button onclick="window.location.href='../index.html'">Sair</button>
+        </div>
         <br>
-        <h2 class="titulo" align="center">ACIDENTES NÃO ACONTECEM POR ACASO, MAS POR DESCASO!!!!</h2>
-        <br>
-        <h2 class="titulo" align="center">CADASTRO DE VEICULOS </h2>
+        <!-- Header -->
+        <header id="header">
+            <div class="logo">
+                <span class="icon"><i class="fas fa-car-side"></i></span>
+            </div>
+            <div class="content">
+                <div class="inner">
+                    <h1>Veículos</h1>
+                    <p>Controle total sobre o veículo de seus clientes! Escolha entre adicionar um novo ou gerenciar os existentes.</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="vei_cad.php">Incluir</a></li>
+                    <li><a href="vei_cons1.php">Buscar</a></li>
+                    <li><a href="vei_alt_cons.php">Atualizar</a></li>
+                    <li><a href="vei_del.php">Excluir</a></li>
+                    <!--<li><a href="#elements">Elements</a></li>-->
+                </ul>
+            </nav>
+        </header>
 
-    </header>
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright"> WebSite By Company ATK</p>
+        </footer>
 
-    <br>
-    <br>
-    <br>
+    </div>
 
-    <img src="img/img1.jpg" title="Seguradora"> <br>
+    <!-- BG -->
+    <div id="bg"></div>
 
-    <a href="vei_cad.php"><button style="background: #069cc2; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 10px;">INCLUIR </button></a>
-
-    <a href="vei_cons1.php"><button style="background: #069cc2; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 10px;">LER </button></a>
-
-    <a href="vei_alt_cons.php"><button style="background: #069cc2; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 10px;">ATUALIZAR </button></a>
-
-    <a href="vei_del.php"><button style="background: #069cc2; border-radius: 6px; padding: 10px; cursor: pointer; color: #fff; border: none; font-size: 10px;">EXCLUIR </button></a>
-
-    <br><br>
-    <hr>
-
-    <a href="../home.html"> <img src="../img/home.png" width="120" height="80"> </a>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <footer>
-        <p style='color:#808080'>&copy; Copyright
-            <script>
-                var year = new Date();
-                document.writeln(+year.getUTCFullYear());
-            </script>
-        </p>
-    </footer>
-
-</center>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
 
 </body>
 

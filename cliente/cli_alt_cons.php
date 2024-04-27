@@ -28,7 +28,7 @@
             </div>
             <div class="content">
                 <div class="inner">
-                    <h1>Buscar clientes para alteração</h1>
+                    <h1>Buscar cliente para alteração</h1>
         </header>
         </h1>
         <br>

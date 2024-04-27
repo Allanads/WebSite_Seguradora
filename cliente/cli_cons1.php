@@ -38,7 +38,7 @@ include_once("../conexao.php")
 			<br>
             <div class="form-container">
                 <form method="POST" action="cli_cons2_pro.php">
-                    <label>DIGITE O CÓDIGO PARA BUSCAR OS DADOS DO CLIENTE: </label>
+                    <label>DIGITE O NOME PARA BUSCAR OS DADOS DO CLIENTE: </label>
                     <center>
 					<input type="text" required name="nome" placeholder="Digite o nome do cliente"><br>
                     <input type="submit" name="Consultar" value="Consultar">
