@@ -39,7 +39,7 @@ include_once("../conexao.php");
             </div>
             <div class="content">
                 <div class="inner">
-                    <h1>Buscar veículo</h1>
+                    <h1>Buscar todos os veículos</h1>
                 </div>
         </header>
         </h1>
@@ -54,18 +54,21 @@ include_once("../conexao.php");
         } else {
             // Exibindo detalhes do veículo
             while ($row_veiculo = mysqli_fetch_assoc($resultado_veiculo)) {
+                echo "<h2>Informações do veículo</h2>";
                 echo "<strong>Código:</strong> " . $row_veiculo['cod'] . "<br>";
                 echo "<strong>Placa:</strong> " . $row_veiculo['placa'] . "<br>";
                 echo "<strong>Renavan:</strong> " . $row_veiculo['renavan'] . "<br>";
                 echo "<strong>Fabricante:</strong> " . $row_veiculo['fabricante'] . "<br>";
                 echo "<strong>Modelo:</strong> " . $row_veiculo['modelo'] . "<br>";
                 echo "<strong>Ano:</strong> " . $row_veiculo['ano'] . "<br><br>";
-                echo "<hr><br>";
+                
             }
         }
         ?>
 
         </header>
+
+        <button onclick="window.location.href='vei_cons1.php'">Nova Consulta</button><br>
 
         <!-- Footer -->
         <footer id="footer">

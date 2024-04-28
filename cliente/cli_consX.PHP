@@ -47,15 +47,18 @@ include_once("../conexao.php");
 		$resultado_cliente = mysqli_query($conn,$result_cliente);
 
 	while($row_cliente = mysqli_fetch_assoc($resultado_cliente)){
+    echo "<h2>Informações do cliente</h2>";
 	echo "<strong>Código:</strong> ".$row_cliente['cod']."<br>";
 	echo "<strong>Nome:</strong> ".$row_cliente['nome']."<br>";
 	echo "<strong>CPF:</strong> ".$row_cliente['cpf']."<br>";
 	echo "<strong>RG:</strong> ".$row_cliente['rg']."<br>";
-    echo "<hr><br>";
+    echo "<br><br>";
 	}
 ?>
 
         </header>
+
+        <button onclick="window.location.href='cli_cons1.php'">Nova Consulta</button><br>
 
         <!-- Footer -->
         <footer id="footer">

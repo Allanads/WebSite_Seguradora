@@ -49,10 +49,11 @@ mysqli_stmt_execute($stmt); // Executando a consulta
 $resultado_cliente = mysqli_stmt_get_result($stmt); // Obtendo o resultado da consulta
 
 if ($row_cliente = mysqli_fetch_assoc($resultado_cliente)) {
+    echo "<h2>Informações do cliente</h2>";
     echo "<strong>Código:</strong> " . $row_cliente['cod'] . "<br>";
     echo "<strong>Nome:</strong> " . $row_cliente['nome'] . "<br>";
     echo "<strong>CPF:</strong> " . $row_cliente['cpf'] . "<br>";
-    echo "<strong>RG:</strong> " . $row_cliente['rg'] . "<br>";
+    echo "<strong>RG:</strong> " . $row_cliente['rg'] . "<br><br>";
 } else {
     echo "<span style='color: red; font-size: larger; font-weight: bold;'>Cliente não existe!!!!</span>";
 }
@@ -62,6 +63,8 @@ if ($row_cliente = mysqli_fetch_assoc($resultado_cliente)) {
 ?>
 
         </header>
+
+        <button onclick="window.location.href='cli_cons1.php'">Nova Consulta</button><br>
 
         <!-- Footer -->
         <footer id="footer">

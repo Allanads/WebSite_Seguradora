@@ -51,6 +51,7 @@ include_once("../conexao.php");
 
         // Verifica se a consulta retornou algum resultado
         if ($row_veiculo = mysqli_fetch_assoc($resultado_veiculo)) {
+            echo "<h2>Informações do veículo</h2>";
             echo "<strong>Código:</strong> " . $row_veiculo['cod'] . "<br>";
             echo "<strong>Placa:</strong> " . $row_veiculo['placa'] . "<br>";
             echo "<strong>Renavan:</strong> " . $row_veiculo['renavan'] . "<br>";
@@ -62,6 +63,8 @@ include_once("../conexao.php");
             echo "Veículo não existe!";
         }
         ?>
+
+        <button onclick="window.location.href='vei_cons1.php'">Nova Consulta</button><br>
 
         <!-- Footer -->
         <footer id="footer">
