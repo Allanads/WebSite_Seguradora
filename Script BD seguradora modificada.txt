@@ -49,4 +49,22 @@ CREATE TABLE `e2_veiculos` (
   PRIMARY KEY (`COD`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `e3_ocorrencias`
+--
+
+CREATE TABLE `e3_ocorrencias` (
+  `COD` int(11) NOT NULL AUTO_INCREMENT,
+  `COD_CLIENTE` int(11) NOT NULL,
+  `COD_VEICULO` int(11) NOT NULL,
+  `DATA_OCORRENCIA` date DEFAULT NULL,
+  `LOCAL_OCORRENCIA` varchar(50) DEFAULT NULL,
+  `DESCRICAO_OCORRENCIA` varchar(100) DEFAULT NULL,
+  PRIMARY KEY (`COD`),
+  FOREIGN KEY (`COD_CLIENTE`) REFERENCES `e1_cliente`(`COD`),
+  FOREIGN KEY (`COD_VEICULO`) REFERENCES `e2_veiculos`(`COD`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
 COMMIT;
