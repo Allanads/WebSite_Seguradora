@@ -1,14 +1,7 @@
-﻿<?php
+<?php
 session_start();
 include_once("../conexao.php");
-
-// Verifica se foi requisitada a geração do PDF
-if (isset($_GET['pdf'])) {
-    include_once("generate_pdf.php");
-    exit(); // Evita que o código HTML seja processado após a geração do PDF
-}
 ?>
-
 <!DOCTYPE HTML>
 <html lang="pt">
 
@@ -37,10 +30,6 @@ if (isset($_GET['pdf'])) {
             <button onclick="window.location.href='../home.html'">Tela Inicial</button>
             <button onclick="window.location.href='ocorrencias.html'">Voltar</button>
             <button onclick="window.location.href='../index.html'">Sair</button>
-            <!-- Botão de impressão em PDF -->
-            <button onclick="window.location.href='pdf_generator.php'">Imprimir PDF</button>
-
-
         </div>
         <br>
         <!-- Header -->
@@ -59,6 +48,7 @@ if (isset($_GET['pdf'])) {
         <?php
         // Consulta SQL para obter todas as ocorrências
         global $conn;
+        // Consulta SQL para obter as informações da ocorrência
         $sql_ocorrencia = "SELECT o.COD AS cod_ocorrencia, o.DATA_OCORRENCIA, o.LOCAL_OCORRENCIA, o.DESCRICAO_OCORRENCIA, v.cod AS cod_veiculo, v.placa, v.renavan, v.fabricante AS fabricante_veiculo, v.modelo AS modelo_veiculo, v.ano AS ano_veiculo, c.cod AS cod_cliente, c.nome, c.cpf, c.rg
                                 FROM e3_ocorrencias o
                                 INNER JOIN e2_veiculos v ON o.COD_VEICULO = v.COD
