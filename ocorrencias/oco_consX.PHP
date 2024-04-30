@@ -1,12 +1,6 @@
 ﻿<?php
 session_start();
 include_once("../conexao.php");
-
-// Verifica se foi requisitada a geração do PDF
-if (isset($_GET['pdf'])) {
-    include_once("generate_pdf.php");
-    exit(); // Evita que o código HTML seja processado após a geração do PDF
-}
 ?>
 
 <!DOCTYPE HTML>
@@ -38,9 +32,7 @@ if (isset($_GET['pdf'])) {
             <button onclick="window.location.href='ocorrencias.html'">Voltar</button>
             <button onclick="window.location.href='../index.html'">Sair</button>
             <!-- Botão de impressão em PDF -->
-            <button onclick="window.location.href='pdf_generator.php'">Imprimir PDF</button>
-
-
+            <button onclick="openPdfInNewTab()">Imprimir PDF</button>
         </div>
         <br>
         <!-- Header -->
@@ -111,6 +103,27 @@ if (isset($_GET['pdf'])) {
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+
+    <script>
+        function openPdfInNewTab() {
+            var form = document.createElement("form");
+            form.setAttribute("method", "get");
+            form.setAttribute("action", "pdf_generator.php");
+            form.setAttribute("target", "_blank");
+
+            var input = document.createElement("input");
+            input.setAttribute("type", "hidden");
+            input.setAttribute("name", "pdf");
+            input.setAttribute("value", "true");
+
+            form.appendChild(input);
+
+            document.body.appendChild(form);
+
+            form.submit();
+            document.body.removeChild(form);
+        }
+    </script>
 
 </body>
 

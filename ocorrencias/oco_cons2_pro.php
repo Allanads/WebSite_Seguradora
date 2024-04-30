@@ -33,7 +33,7 @@ if (isset($_GET['pdf'])) {
             <button onclick="window.location.href='ocorrencias.html'">Voltar</button>
             <button onclick="window.location.href='../index.html'">Sair</button>
             <!-- Botão de impressão em PDF -->
-            <button onclick="window.location.href='pdf_generator1.php'">Imprimir PDF</button>
+            <button onclick="window.open('pdf_generator1.php', '_blank')">Imprimir PDF</button>
         </div>
         <br>
         <header id="header">
@@ -43,9 +43,11 @@ if (isset($_GET['pdf'])) {
             <div class="content">
                 <div class="inner">
                     <h1>Buscar ocorrência</h1>
-                </header>
-            </h1>
-            <br>
+                </div>
+            </div>
+        </header>
+        <br>
+        <div class="inner">
             <?php
             // Verifica se o parâmetro 'cod' foi enviado via POST
             if (isset($_POST['cod'])) {
@@ -84,20 +86,20 @@ if (isset($_GET['pdf'])) {
                 }
             }
             ?>
-
-            <button onclick="window.location.href='oco_cons1.php'">Nova Consulta</button><br>
-
-            <!-- Footer -->
-            <footer id="footer">
-                <p class="copyright"> WebSite By Company ATK</p>
-            </footer>
         </div>
-        <div id="bg"></div>
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
-    </body>
+        <button onclick="window.location.href='oco_cons1.php'">Nova Consulta</button><br>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <p class="copyright"> WebSite By Company ATK</p>
+        </footer>
+    </div>
+    <div id="bg"></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
 
 </html>
