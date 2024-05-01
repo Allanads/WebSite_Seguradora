@@ -79,6 +79,7 @@ include_once("../conexao.php");
                 echo "<strong>CPF:</strong> " . $row_ocorrencia['cpf'] . "<br>";
                 echo "<strong>RG:</strong> " . $row_ocorrencia['rg'] . "<br><br>";
                 echo "<br><br>";
+
             }
         } else {
             echo "<span class='error-msg'>Nenhuma ocorrência encontrada!</span>";

@@ -23,6 +23,10 @@ if (isset($_GET['pdf'])) {
             font-size: 27px;
             font-weight: bold;
         }
+
+        .left-align {
+            text-align: left;
+        }
     </style>
 </head>
 
@@ -64,25 +68,25 @@ if (isset($_GET['pdf'])) {
                 // Verifica se a consulta retornou algum resultado
                 if ($resultado_ocorrencia && mysqli_num_rows($resultado_ocorrencia) > 0) {
                     $row_ocorrencia = mysqli_fetch_assoc($resultado_ocorrencia);
-                    echo "<h2>Informações da Ocorrência</h2>";
-                    echo "<strong>Código da Ocorrência:</strong> " . $row_ocorrencia['cod_ocorrencia'] . "<br>";
-                    echo "<strong>Data da Ocorrência:</strong> " . $row_ocorrencia['DATA_OCORRENCIA'] . "<br>";
-                    echo "<strong>Local da Ocorrência:</strong> " . $row_ocorrencia['LOCAL_OCORRENCIA'] . "<br>";
-                    echo "<strong>Descrição da Ocorrência:</strong> " . $row_ocorrencia['DESCRICAO_OCORRENCIA'] . "<br><br>";
-                    echo "<h2>Informações do Veículo</h2>";
-                    echo "<strong>Código do Veículo:</strong> " . $row_ocorrencia['cod_veiculo'] . "<br>";
-                    echo "<strong>Placa:</strong> " . $row_ocorrencia['placa'] . "<br>";
-                    echo "<strong>Renavan:</strong> " . $row_ocorrencia['renavan'] . "<br>";
-                    echo "<strong>Fabricante:</strong> " . $row_ocorrencia['fabricante_veiculo'] . "<br>";
-                    echo "<strong>Modelo:</strong> " . $row_ocorrencia['modelo_veiculo'] . "<br>";
-                    echo "<strong>Ano:</strong> " . $row_ocorrencia['ano_veiculo'] . "<br><br>";
-                    echo "<h2>Informações do Cliente</h2>";
-                    echo "<strong>Código do Cliente:</strong> " . $row_ocorrencia['cod_cliente'] . "<br>";
-                    echo "<strong>Nome:</strong> " . $row_ocorrencia['nome'] . "<br>";
-                    echo "<strong>CPF:</strong> " . $row_ocorrencia['cpf'] . "<br>";
-                    echo "<strong>RG:</strong> " . $row_ocorrencia['rg'] . "<br><br>";
+                    echo "<h2 class='left-align'>Informações da Ocorrência</h2>";
+                    echo "<strong class='left-align'>Código da Ocorrência:</strong> " . $row_ocorrencia['cod_ocorrencia'] . "<br>";
+                    echo "<strong class='left-align'>Data da Ocorrência:</strong> " . $row_ocorrencia['DATA_OCORRENCIA'] . "<br>";
+                    echo "<strong class='left-align'>Local da Ocorrência:</strong> " . $row_ocorrencia['LOCAL_OCORRENCIA'] . "<br>";
+                    echo "<strong class='left-align'>Descrição da Ocorrência:</strong> " . $row_ocorrencia['DESCRICAO_OCORRENCIA'] . "<br><br>";
+                    echo "<h2 class='left-align'>Informações do Veículo</h2>";
+                    echo "<strong class='left-align'>Código do Veículo:</strong> " . $row_ocorrencia['cod_veiculo'] . "<br>";
+                    echo "<strong class='left-align'>Placa:</strong> " . $row_ocorrencia['placa'] . "<br>";
+                    echo "<strong class='left-align'>Renavan:</strong> " . $row_ocorrencia['renavan'] . "<br>";
+                    echo "<strong class='left-align'>Fabricante:</strong> " . $row_ocorrencia['fabricante_veiculo'] . "<br>";
+                    echo "<strong class='left-align'>Modelo:</strong> " . $row_ocorrencia['modelo_veiculo'] . "<br>";
+                    echo "<strong class='left-align'>Ano:</strong> " . $row_ocorrencia['ano_veiculo'] . "<br><br>";
+                    echo "<h2 class='left-align'>Informações do Cliente</h2>";
+                    echo "<strong class='left-align'>Código do Cliente:</strong> " . $row_ocorrencia['cod_cliente'] . "<br>";
+                    echo "<strong class='left-align'>Nome:</strong> " . $row_ocorrencia['nome'] . "<br>";
+                    echo "<strong class='left-align'>CPF:</strong> " . $row_ocorrencia['cpf'] . "<br>";
+                    echo "<strong class='left-align'>RG:</strong> " . $row_ocorrencia['rg'] . "<br><br>";
                 } else {
-                    echo "<span style='color:red; font-weight:bold;'>Ocorrência não encontrada!</span>";
+                    echo "<span style='color:red; font-weight:bold;' class='left-align'>Ocorrência não encontrada!</span>";
                 }
             }
             ?>
