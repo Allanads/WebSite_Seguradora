@@ -41,12 +41,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $_SESSION['msg'] = "<span style='color:red; font-weight:bold;'>Erro: Cliente ou veículo não encontrado.</span>";
         }
+
+        // Redireciona após o processamento (evita reenvio do formulário)
+        header("Location: " . $_SERVER["PHP_SELF"]);
+        exit();
     } else {
         $_SESSION['msg'] = "<span style='color:red; font-weight:bold;'>Erro: Todos os campos devem ser preenchidos.</span>";
     }
 }
 ?>
-
 
 <!DOCTYPE HTML>
 <html lang="pt">
@@ -58,22 +61,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        
         input[type="date"] {
             color: black;
         }
-
 
         input[type="date"]::-webkit-datetime-edit {
             color: black;
         }
 
-
         input[type="date"]::-webkit-calendar-picker-indicator {
             color: black;
-            background: transparent; 
+            background: transparent;
         }
-
 
         input[type="date"]:-moz-datetime-edit {
             color: black;
@@ -96,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <!-- Header -->
         <header id="header">
             <div class="logo">
-			<span class="icon"><i class="fas fa-newspaper"></i><i class="fas fa-pencil-alt"></i></span>
+                <span class="icon"><i class="fas fa-newspaper"></i><i class="fas fa-pencil-alt"></i></span>
             </div>
             <div class="content">
                 <div class="inner">
@@ -123,7 +122,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" name="placa" maxlength="8" required placeholder="Digite a placa do veículo"><br>
 
                 <label>Data do ocorrido: </label>
-                <input type="date" name="data" required placeholder="Digite a data da ocorrência" value="<?php echo date('Y-m-d'); ?>"><br><br>
+                <input type="date" name="data" required placeholder="Digite a data da ocorrência"><br><br>
 
                 <label>Local do ocorrido: </label>
                 <input type="text" name="local" required maxlength="50" placeholder="Digite o local da ocorrência"><br>
@@ -132,6 +131,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <input type="text" name="descr" required maxlength="100" placeholder="Digite a descrição da ocorrência"><br>
                 <center>
                     <input type="submit" value="INCLUIR">
+                </center>
             </form>
         </div>
 
