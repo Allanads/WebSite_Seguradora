@@ -58,14 +58,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
     <style>
-        /* Estilo para corrigir a cor do texto selecionado dentro do input */
-        input[type="date"]::-webkit-datetime-edit-text {
+        
+        input[type="date"] {
             color: black;
         }
-        
-        /* Estilo para corrigir o fundo do input */
+
+
+        input[type="date"]::-webkit-datetime-edit {
+            color: black;
+        }
+
+
         input[type="date"]::-webkit-calendar-picker-indicator {
-            background-color: white;
+            color: black;
+            background: transparent; 
+        }
+
+
+        input[type="date"]:-moz-datetime-edit {
+            color: black;
         }
     </style>
 </head>
