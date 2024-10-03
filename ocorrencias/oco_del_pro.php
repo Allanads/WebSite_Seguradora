@@ -17,7 +17,7 @@ include_once("../conexao.php");
     <style>
         .error-msg {
             color: red;
-            font-size: 27px;
+            font-size: 37px;
             font-weight: bold;
         }
 
@@ -80,19 +80,19 @@ include_once("../conexao.php");
                     echo "<strong class='left-align'>Nome:</strong> " . $row_ocorrencia['nome'] . "<br>";
                     echo "<strong class='left-align'>CPF:</strong> " . $row_ocorrencia['cpf'] . "<br>";
                     echo "<strong class='left-align'>RG:</strong> " . $row_ocorrencia['rg'] . "<br><br>";
+
+                    // Exibe o botão de exclusão somente se a ocorrência foi encontrada
+                    echo "<form method='POST' action='oco_del1.php'>
+                            <input type='hidden' name='cod_ocorrencia' value='" . $row_ocorrencia['cod_ocorrencia'] . "'>
+                            <button type='submit'>Excluir</button>
+                          </form>";
                 } else {
-                    echo "<span style='color:red; font-weight:bold;' class='left-align'>Ocorrência não encontrada!</span>";
+                    // Se a ocorrência não foi encontrada, exibe a mensagem de erro
+                    echo "<span style='color:yellow; font-weight:bold;' class='left-align'>Ocorrência não encontrada!</span>";
                 }
             }
             ?>
         </div>
-
-        
-        <form method="POST" action="oco_del1.php">
-            <input type="hidden" name="cod_ocorrencia" value="<?php echo $row_ocorrencia['cod_ocorrencia']; ?>">
-            <button type="submit">Excluir</button>
-        </form>
-
 
         <br>
 
