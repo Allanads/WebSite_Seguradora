@@ -1754,7 +1754,6 @@ input[type="date"]::-webkit-datetime-edit {
 input[type="date"]::-webkit-calendar-picker-indicator {
     color: black;
     background: transparent;
-    /* Remove o fundo branco para o ícone do calendário */
 }
 
 
