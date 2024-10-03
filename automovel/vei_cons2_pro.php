@@ -42,8 +42,8 @@ include_once("../conexao.php");
         // Recebe o código do veículo via POST
         $placa = filter_input(INPUT_POST,'placa',FILTER_SANITIZE_STRING);
 
-        // Escapa o código para evitar injeção de SQL
-        $cod = mysqli_real_escape_string($conn, $cod);
+        // Escapa a variável $placa para evitar injeção de SQL
+        $placa = mysqli_real_escape_string($conn, $placa);
 
         // Consulta SQL
         $result_veiculo = "SELECT cod,placa,renavan,fabricante,modelo,ano FROM e2_veiculos WHERE placa='$placa'";
@@ -60,10 +60,10 @@ include_once("../conexao.php");
             echo "<strong>Ano:</strong> " . $row_veiculo['ano'] . "<br><br>";
         } else {
             // Se não encontrou o veículo
-            echo "Veículo não existe!";
+            echo "<h2><font color='red'>Veículo não existe!</font></h2>";
         }
         ?>
-
+        <br><br>
         <button onclick="window.location.href='vei_cons1.php'">Nova Consulta</button><br>
 
         <!-- Footer -->

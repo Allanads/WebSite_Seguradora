@@ -33,7 +33,7 @@ include_once("../conexao.php");
 			<br>
             <div class="form-container">
                 <form method="POST" action="oco_del_pro.php">
-                    <label>DIGITE CÓDIGO DA OCORRÊNCIA PARA EXCLUÍ-LO: </label>
+                    <label>DIGITE CÓDIGO DA OCORRÊNCIA PARA EXCLUÍ-LA: </label>
                     <center>
                         <input type="text" required name="cod" placeholder="Digite o código da ocorrência"><br>
                         <input type="submit" name="Consultar" value="Consultar">
