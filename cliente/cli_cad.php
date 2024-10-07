@@ -5,11 +5,19 @@ session_start();
 <html lang="pt">
 
 <head>
-    <title>WebSite Seguradora ATK</title>
+    <title>Inclusão de Clientes - Seguradora ATK</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    
+    <!-- Link para o CSS principal -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- jQuery Mask Plugin para aplicar a máscara no telefone -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
 </head>
 
 <body class="is-preload">
@@ -24,6 +32,7 @@ session_start();
             <button onclick="window.location.href='../index.html'">Sair</button>
         </div>
         <br>
+
         <!-- Header -->
         <header id="header">
             <div class="logo">
@@ -31,48 +40,92 @@ session_start();
             </div>
             <div class="content">
                 <div class="inner">
-                    <h1>Inclusão de clientes</h1>
-                </header>
-                <br>
-            </h1>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
-            
-            
-            <?php 
-            if(isset($_SESSION['msg'])){
-                echo $_SESSION['msg'];
-                unset($_SESSION['msg']);
-            }
-            ?>
-            
-            <script>
-                // Máscara para o campo de telefone
-                $(document).ready(function(){
-                    $('.telefone').mask('(00) 00000-0000');
-                });
-            </script>
-            
-            
-            <div class="form-container-cli">
-                <form method="POST" action="cli_pro.php">
-            
-                    <label>Nome: </label>
-                    <input type="text" name="nome" maxlength="30" required placeholder="Digite o Nome do Cliente"><br>
-            
-                    <label>CPF: </label>
-                    <input type="text" name="cpf" maxlength="11" required placeholder="Digite o CPF do Cliente"><br>
-            
-                    <label>RG: </label>
-                    <input type="text" name="rg" maxlength="10" required placeholder="Digite o RG do Cliente"><br>
-                    <!--
-                    <label>Telefone: </label>
-                    <input type="text" name="tel" required placeholder="Digite o Telefone do Cliente" class="telefone"><br><br>-->
-            
-                    <input type="submit" value="INCLUIR">
-                </form>
+                    <h1>Inclusão de Clientes</h1>
+                </div>
             </div>
         </header>
+        <br>
+
+        <?php 
+        if (isset($_SESSION['msg'])) {
+            echo $_SESSION['msg'];
+            unset($_SESSION['msg']);
+        }
+        ?>
+
+        <div class="form-container-cli">
+            <form method="POST" action="cli_pro.php">
+                <label>Nome: </label>
+                <input type="text" id="nome" name="nome" maxlength="30" required placeholder="Digite o Nome do Cliente">
+                <div id="nome-msg"></div><br>
+
+                <label>CPF: </label>
+                <input type="text" id="cpf" name="cpf" maxlength="11" required placeholder="Digite o CPF do Cliente">
+                <div id="cpf-msg"></div><br>
+
+                <label>RG: </label>
+                <input type="text" id="rg" name="rg" maxlength="10" required placeholder="Digite o RG do Cliente">
+                <div id="rg-msg"></div><br>
+
+                <input type="submit" value="INCLUIR">
+            </form>
+        </div>
+
+        <!-- Scripts para verificação em tempo real -->
+        <script>
+            $(document).ready(function() {
+                // Função para verificar se o nome já existe
+                $('#nome').on('input', function() {
+                    var nome = $(this).val();
+                    if (nome.length >= 3) {
+                        $.ajax({
+                            url: 'verifica_duplicidade_cliente.php',
+                            method: 'POST',
+                            data: { nome: nome },
+                            success: function(data) {
+                                $('#nome-msg').html(data);
+                            }
+                        });
+                    } else {
+                        $('#nome-msg').html('');
+                    }
+                });
+
+                // Função para verificar se o CPF já existe
+                $('#cpf').on('input', function() {
+                    var cpf = $(this).val();
+                    if (cpf.length >= 11) {
+                        $.ajax({
+                            url: 'verifica_duplicidade_cliente.php',
+                            method: 'POST',
+                            data: { cpf: cpf },
+                            success: function(data) {
+                                $('#cpf-msg').html(data);
+                            }
+                        });
+                    } else {
+                        $('#cpf-msg').html('');
+                    }
+                });
+
+                // Função para verificar se o RG já existe
+                $('#rg').on('input', function() {
+                    var rg = $(this).val();
+                    if (rg.length >= 9) {
+                        $.ajax({
+                            url: 'verifica_duplicidade_cliente.php',
+                            method: 'POST',
+                            data: { rg: rg },
+                            success: function(data) {
+                                $('#rg-msg').html(data);
+                            }
+                        });
+                    } else {
+                        $('#rg-msg').html('');
+                    }
+                });
+            });
+        </script>
 
         <!-- Footer -->
         <footer id="footer">

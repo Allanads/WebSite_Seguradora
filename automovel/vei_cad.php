@@ -90,7 +90,7 @@ session_start();
                 var placa = $(this).val();
                 if (placa.length >= 7) {
                     $.ajax({
-                        url: 'verifica_duplicidade.php',
+                        url: 'verifica_duplicidade_veiculo.php',
                         method: 'POST',
                         data: { placa: placa },
                         success: function(data) {
@@ -105,7 +105,7 @@ session_start();
                 var renavan = $(this).val();
                 if (renavan.length >= 9) {
                     $.ajax({
-                        url: 'verifica_duplicidade.php',
+                        url: 'verifica_duplicidade_veiculo.php',
                         method: 'POST',
                         data: { renavan: renavan },
                         success: function(data) {
