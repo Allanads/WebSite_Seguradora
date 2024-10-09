@@ -42,7 +42,7 @@ session_start();
                         <center>
                             <h2>PESQUISAR DADOS DE USUÁRIO</h2>
 
-							<img src="images/dados3.png" alt="imagem de centro" width="270" height="270" title="Pesquisar"> <br>
+							<img src="images/pesquisar.png" alt="imagem de centro" width="170" height="170" title="Pesquisar"> <br>
 
                             <div class="form-container">
                                 <form method="post" name="consultar_usuario"

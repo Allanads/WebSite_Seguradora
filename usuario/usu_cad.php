@@ -43,6 +43,8 @@ session_start();
                     <center>
                         <h2>CADASTRO DE USUÁRIO</h2>
 
+                        <img src="images/incluir.png" alt="imagem de centro" width="170" height="170" title="Pesquisar"> <br>
+
                         <?php
                         if (isset($_SESSION['msg'])) {
                             echo $_SESSION['msg'];
@@ -53,13 +55,13 @@ session_start();
                         <div class="form-container">
                             <form method="POST" action="usu_cad1.php">
                                 <label><strong>Nome:</strong></label>
-                                <input type="text" name="nome" maxlength="140" required placeholder="Digite seu nome"><br><br>
+                                <input type="text" name="nome" maxlength="140" required placeholder="Digite seu nome"><br>
 
                                 <label><strong>E-mail:</strong></label>
-                                <input type="email" name="email" maxlength="140" required placeholder="Digite seu e-mail"><br><br>
+                                <input type="email" name="email" maxlength="140" required placeholder="Digite seu e-mail"><br>
 
                                 <label><strong>Senha:</strong></label>
-                                <input type="password" name="senha" maxlength="16" required placeholder="******"><br><br>
+                                <input type="password" name="senha" maxlength="16" required placeholder="******"><br>
 
                                 <input type="submit" name="enviar" value="INCLUIR" style="background-color: #03ad61; color: white;">
                             </form>
