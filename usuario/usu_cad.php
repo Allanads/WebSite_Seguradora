@@ -65,7 +65,7 @@ session_start();
 
                                 <input type="submit" name="enviar" value="INCLUIR" style="background-color: #03ad61; color: white;">
                             </form>
-                            <a href="../login.php"><button>FAZER LOGIN</button></a>
+                            <a href="../login.php"><button>FAZER LOGINstyle="background-color: #03619e; color: white;</button></a>
                         </div>
 
                 </header>

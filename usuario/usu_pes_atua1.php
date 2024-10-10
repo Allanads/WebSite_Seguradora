@@ -42,7 +42,7 @@ session_start();
                         <center>
                             <h2>ALTERAR DADOS DE USUÁRIO</h2>
 
-							<img src="images/alterar.png" alt="imagem de centro" width="170" height="170" title="Pesquisar"> <br>
+							<img src="images/alterar.png" alt="imagem de centro" width="150" height="150" title="Pesquisar"> <br>
 
                             <div class="form-container">
                                 <form method="post" name="consultar_usuario"

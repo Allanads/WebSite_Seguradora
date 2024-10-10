@@ -52,7 +52,7 @@ include_once("../conexao.php");
                             $result_cliente = "UPDATE e0_usuario SET email='$email',nome='$nome',senha='$senha' WHERE id='$id'";
                             $resultado_cliente = mysqli_query($conn, $result_cliente);
                             // var_dump($email);
-                            echo "<h2><font color='green'>Atualizado com sucesso!</font></h2>";
+                            echo "<h2><font color='yellow'>Atualizado com sucesso!</font></h2>";
 
                             ?>
                             <br>

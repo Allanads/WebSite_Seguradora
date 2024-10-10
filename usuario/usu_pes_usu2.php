@@ -55,7 +55,7 @@ include_once("../conexao.php");
 								if ($row_usuario) {
 
 
-									echo "<h1><font color='green' size='+1'>Consta na nossa base de dados o usuário:</font></h1>";
+									echo "<h1><font color='yellow' size='+1'>Consta na nossa base de dados o usuário:</font></h1>";
 
 									echo "<label><strong>Nome:</strong></label>
 									<span>" . $row_usuario['nome'] . "</span><br><br>";
