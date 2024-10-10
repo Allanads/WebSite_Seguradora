@@ -53,8 +53,6 @@ include_once("../conexao.php");
 							<form method="POST" name="alterar_usuario" action="usu_alt_cons2.php">
 								<?php
 								if ($row_usuario) {
-
-
 									echo "<h1><font color='yellow' size='+1'>Consta na nossa base de dados o usuário:</font></h1>";
 
 									echo "<label><strong>Nome:</strong></label>
@@ -70,10 +68,14 @@ include_once("../conexao.php");
 								}
 								?>
 							</form>
-							<form action="usu_pes_usu1.php">
-							<label>Deseja fazer uma nova pesquisa ? </label>
-							<button>VOLTAR </button>
-							</form>
+
+							<!-- Centralizando a mensagem e o botão de voltar -->
+							<div style="text-align: center; margin-top: 5px;">
+								<label>Deseja fazer uma nova pesquisa?</label>
+								<form action="usu_pes_usu1.php" style="display: inline;">
+									<button type="submit" style="background-color: #808080; color: white;">VOLTAR</button>
+								</form>
+							</div>
 						</div>
 </body>
 

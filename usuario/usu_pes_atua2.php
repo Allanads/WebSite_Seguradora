@@ -45,7 +45,7 @@ include_once("../conexao.php");
 						<br>
 						<div class="form-container">
 							<?php
-							$email = filter_input(INPUT_POST,'email',FILTER_SANITIZE_STRING);
+							$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
 							$result_usuario = "SELECT id, nome, email, senha FROM e0_usuario WHERE email='$email'";         
 							$resultado_usuario = mysqli_query($conn, $result_usuario);
 							$row_usuario;
@@ -69,10 +69,18 @@ include_once("../conexao.php");
 
 									echo "<input type='submit' name='Atualiza' value='Atualiza'> ";
 								} else {
-									echo "<h2><font color='red' size='+2'>Usuário não existe!!!!!</font></h2>";
+									echo "<h2><font color='red' size='+2'>Usuário não existe!!!!!</font></h2><br>";
 								}
 								?>
 							</form>
+
+							<!-- Botão de Voltar centralizado -->
+							<div style="text-align: center; margin-top: 5px;">
+								<a href="usu_pes_atua1.php">
+									<label>Deseja fazer uma nova pesquisa?</label>
+									<button type="button" style="background-color: #808080; color: white;">VOLTAR</button>
+								</a>
+							</div>
 						</div>
 </body>
 

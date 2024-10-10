@@ -42,7 +42,7 @@ session_start();
                         <center>
                             <h2>EXCLUIR USUÁRIO</h2>
 
-							<img src="images/excluir.png" alt="imagem de centro" width="150" height="150" title="Pesquisar"> <br>
+							<img src="images/excluir.png" alt="imagem de centro" width="120" height="120" title="Pesquisar"> <br>
 
                             <div class="form-container">
                                 <form method="post" name="consultar_usuario"
