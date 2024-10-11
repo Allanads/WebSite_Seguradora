@@ -69,7 +69,7 @@ include_once("../conexao.php");
 
 									echo "<input type='submit' name='Atualiza' value='Atualiza'> ";
 								} else {
-									echo "<h2><font color='red' size='+2'>Usuário não existe!!!!!</font></h2><br>";
+									echo "<h2><font color='red' size='+2'>Usuário não existe!!!!!</font></h2>";
 								}
 								?>
 							</form>

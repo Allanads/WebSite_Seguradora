@@ -41,7 +41,8 @@ include_once("../conexao.php");
             <article class="box">
                 <header>
                     <center>
-                        
+                        <h2>DADOS DO USUÁRIO</h2>
+                        <br>
                         <div class="form-container">
                             <?php
                             $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
@@ -54,7 +55,7 @@ include_once("../conexao.php");
                                 <?php
                                 if ($row_usuario) {
                                     echo "<h1><font color='green' size='+1'>Consta na nossa base de dados o usuário:</font></h1>";
-									
+                                    
                                     echo "<label><strong>Nome:</strong></label>
                                     <span>" . $row_usuario['nome'] . "</span><br><br>";
 
@@ -70,12 +71,17 @@ include_once("../conexao.php");
                                     echo "<button type='submit'>EXCLUIR</button>";
                                 } else {
                                     echo "<h2><font color='red' size='+2'>Usuário não existe!!!!!</font></h2>";
-                                    echo "<br><a href='usu_pes_exclui1.php'><button type='button'>Voltar para Pesquisa</button></a>";
                                 }
                                 ?>
-                                <br>
                             </form>
 
+                            <!-- Botão de Voltar centralizado -->
+                            <div style="text-align: center; margin-top: 5px;">
+                                <a href="usu_pes_exclui1.php">
+                                    <label>Deseja fazer uma nova pesquisa?</label>
+                                    <button type="button" style="background-color: #808080; color: white;">VOLTAR</button>
+                                </a>
+                            </div>
                         </div>
 </body>
 
