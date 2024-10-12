@@ -74,6 +74,10 @@ include_once("../conexao.php");
                                 ?>
                             </form>
 
+<<<<<<< HEAD
+=======
+                            <!-- Botão de Voltar centralizado -->
+>>>>>>> 4167c07 (Reefactor: Up)
                             <div style="text-align: center; margin-top: 5px;">
                                 <a href="usu_pes_exclui1.php">
                                     <label>Deseja fazer uma nova pesquisa?</label>

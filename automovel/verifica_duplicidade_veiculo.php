@@ -7,6 +7,10 @@ if(isset($_POST['placa'])){
     $result = mysqli_query($conn, $query);
 
     if(mysqli_num_rows($result) > 0){
+<<<<<<< HEAD
+=======
+        // Mensagem em amarelo com quebra de linha
+>>>>>>> 4167c07 (Reefactor: Up)
         echo "<span style='color:yellow; font-weight:bold;'>Placa já cadastrada.</span><br>";
     } else {
         echo "";
@@ -19,6 +23,10 @@ if(isset($_POST['renavan'])){
     $result = mysqli_query($conn, $query);
 
     if(mysqli_num_rows($result) > 0){
+<<<<<<< HEAD
+=======
+        // Mensagem em amarelo com quebra de linha
+>>>>>>> 4167c07 (Reefactor: Up)
         echo "<span style='color:yellow; font-weight:bold;'>Renavan já cadastrado.</span><br>";
     } else {
         echo "";
