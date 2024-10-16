@@ -3542,15 +3542,6 @@ body.subpage {
     overflow: hidden;
 }
 
-#banner img {
-    width: 100%;
-    /* faz com que a imagem ocupe toda a largura do carrossel */
-    height: 100vh;
-    /* faz com que a imagem ocupe toda a altura do carrossel */
-    object-fit: cover;
-    /* faz com que a imagem seja redimensionada para preencher o espaço */
-}
-
 #banner .inner {
     -moz-transform: scale(1.0);
     -webkit-transform: scale(1.0);

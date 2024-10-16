@@ -16,12 +16,20 @@
 
     <!-- Estilo personalizado para definir o tamanho das imagens do carrossel -->
     <style>
+        .carousel-item {
+            height: 360px;
+            /* Defina a altura desejada do carrossel */
+        }
+        
         .carousel-item img {
             width: 100%;
-            height: 350px;
-            /* Altura fixa */
+            /* Assegura que a largura ocupe todo o espaço */
+            height: 135%;
+            /* Adapta a altura ao contêiner */
             object-fit: cover;
-            /* Preenche o espaço sem distorcer */
+            /* Ou 'contain' dependendo do efeito desejado */
+            object-position: center;
+            /* Centraliza a imagem no contêiner */
         }
         /* Ajuste da altura da navbar */
         
