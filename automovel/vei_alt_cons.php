@@ -14,7 +14,7 @@
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Adicionando botões no topo da página -->
+        <!-- Botões no topo da página -->
         <div id="top-buttons">
             <button onclick="window.location.href='../home.html'">Tela Inicial</button>
             <button onclick="window.location.href='automovel.html'">Voltar</button>

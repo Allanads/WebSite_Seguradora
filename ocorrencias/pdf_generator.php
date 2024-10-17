@@ -9,9 +9,6 @@ if (isset($_GET['pdf'])) {
 
     // Função para gerar o PDF
     function generatePDF() {
-        // Código para gerar o PDF
-        // ...
-
         // Cria uma nova instância do TCPDF
         $pdf = new TCPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
 

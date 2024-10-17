@@ -25,7 +25,7 @@ include_once("../conexao.php");
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Adicionando botões no topo da página -->
+        <!-- Botões no topo da página -->
         <div id="top-buttons">
             <button onclick="window.location.href='../home.html'">Tela Inicial</button>
             <button onclick="window.location.href='ocorrencias.html'">Voltar</button>
@@ -46,18 +46,14 @@ include_once("../conexao.php");
         <br>
 
         <?php
-        // Consulta SQL para obter todas as ocorrências
+        // Consulta SQL para obter todas as ocorrências/Consulta SQL para obter as informações da ocorrência/Verifica se a consulta retornou algum resultado/Loop através de todas as ocorrências encontradas
         global $conn;
-        // Consulta SQL para obter as informações da ocorrência
         $sql_ocorrencia = "SELECT o.COD AS cod_ocorrencia, o.DATA_OCORRENCIA, o.LOCAL_OCORRENCIA, o.DESCRICAO_OCORRENCIA, v.cod AS cod_veiculo, v.placa, v.renavan, v.fabricante AS fabricante_veiculo, v.modelo AS modelo_veiculo, v.ano AS ano_veiculo, c.cod AS cod_cliente, c.nome, c.cpf, c.rg
                                 FROM e3_ocorrencias o
                                 INNER JOIN e2_veiculos v ON o.COD_VEICULO = v.COD
                                 INNER JOIN e1_cliente c ON o.COD_CLIENTE = c.COD";
         $resultado_ocorrencia = mysqli_query($conn, $sql_ocorrencia);
-
-        // Verifica se a consulta retornou algum resultado
         if ($resultado_ocorrencia && mysqli_num_rows($resultado_ocorrencia) > 0) {
-            // Loop através de todas as ocorrências encontradas
             while ($row_ocorrencia = mysqli_fetch_assoc($resultado_ocorrencia)) {
                 echo "<h2>Informações da Ocorrência</h2>";
                 echo "<strong>Código da Ocorrência:</strong> " . $row_ocorrencia['cod_ocorrencia'] . "<br>";

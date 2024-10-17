@@ -2,7 +2,6 @@
 session_start();
 include_once("../conexao.php");
 
-// Inclua o arquivo TCPDF
 require_once('tcpdf/tcpdf.php');
 
 // Função para gerar o PDF

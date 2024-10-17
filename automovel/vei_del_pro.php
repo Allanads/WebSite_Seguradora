@@ -16,7 +16,7 @@ if(isset($_POST['placa'])) {
     } else {
         $_SESSION['msg'] = "<h2><font color='red'>Erro ao excluir veículo: " . mysqli_error($conn) . "</font></h2>";
     }
-    header("Location: vei_del_pro.php"); // Substitua 'sua_pagina.php' pelo nome do seu arquivo PHP atual
+    header("Location: vei_del_pro.php");
     exit();
 }
 ?>
@@ -36,7 +36,7 @@ if(isset($_POST['placa'])) {
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Adicionando botões no topo da página -->
+        <!-- Botões no topo da página -->
         <div id="top-buttons">
             <button onclick="window.location.href='../home.html'">Tela Inicial</button>
             <button onclick="window.location.href='automovel.html'">Voltar</button>

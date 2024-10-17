@@ -16,7 +16,7 @@ if(isset($_POST['nome'])) {
     } else {
         $_SESSION['msg'] = "<h2><font color='red'>Erro ao excluir cliente: " . mysqli_error($conn) . "</font></h2>";
     }
-    header("Location: cli_del_pro.php"); // Substitua 'sua_pagina.php' pelo nome do seu arquivo PHP atual
+    header("Location: cli_del_pro.php");
     exit();
 }
 ?>
@@ -37,7 +37,7 @@ if(isset($_POST['nome'])) {
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Adicionando botões no topo da página -->
+        <!-- Botões no topo da página -->
         <div id="top-buttons">
             <button onclick="window.location.href='../home.html'">Tela Inicial</button>
             <button onclick="window.location.href='cliente.html'">Voltar</button>

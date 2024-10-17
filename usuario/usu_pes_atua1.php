@@ -33,7 +33,7 @@ session_start();
             <li><a href="../login.php">Login</a></li>
         </ul>
     </nav>
-        <!-- Content -->
+
 
         <section id="post" class="wrapper bg-img" data-bg="banner4.jpg">
             <div class="inner">

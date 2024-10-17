@@ -7,7 +7,6 @@ if(isset($_POST['placa'])){
     $result = mysqli_query($conn, $query);
 
     if(mysqli_num_rows($result) > 0){
-        // Mensagem em amarelo com quebra de linha
         echo "<span style='color:yellow; font-weight:bold;'>Placa já cadastrada.</span><br>";
     } else {
         echo "";
@@ -20,7 +19,6 @@ if(isset($_POST['renavan'])){
     $result = mysqli_query($conn, $query);
 
     if(mysqli_num_rows($result) > 0){
-        // Mensagem em amarelo com quebra de linha
         echo "<span style='color:yellow; font-weight:bold;'>Renavan já cadastrado.</span><br>";
     } else {
         echo "";

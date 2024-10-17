@@ -34,7 +34,6 @@ include_once("../conexao.php");
             <li><a href="../login.php">Login</a></li>
         </ul>
     </nav>
-	<!-- Content -->
 
 	<section id="post" class="wrapper bg-img" data-bg="banner4.jpg">
 		<div class="inner">
@@ -69,7 +68,6 @@ include_once("../conexao.php");
 								?>
 							</form>
 
-							<!-- Centralizando a mensagem e o botão de voltar -->
 							<div style="text-align: center; margin-top: 5px;">
 								<label>Deseja fazer uma nova pesquisa?</label>
 								<form action="usu_pes_usu1.php" style="display: inline;">

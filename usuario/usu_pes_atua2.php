@@ -34,7 +34,6 @@ include_once("../conexao.php");
             <li><a href="../login.php">Login</a></li>
         </ul>
     </nav>
-	<!-- Content -->
 
 	<section id="post" class="wrapper bg-img" data-bg="banner4.jpg">
 		<div class="inner">
@@ -74,7 +73,6 @@ include_once("../conexao.php");
 								?>
 							</form>
 
-							<!-- Botão de Voltar centralizado -->
 							<div style="text-align: center; margin-top: 5px;">
 								<a href="usu_pes_atua1.php">
 									<label>Deseja fazer uma nova pesquisa?</label>

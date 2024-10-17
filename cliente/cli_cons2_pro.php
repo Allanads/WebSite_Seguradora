@@ -18,7 +18,7 @@ include_once("../conexao.php");
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Adicionando botões no topo da página -->
+        <!-- Botões no topo da página -->
         <div id="top-buttons">
             <button onclick="window.location.href='../home.html'">Tela Inicial</button>
             <button onclick="window.location.href='cliente.html'">Voltar</button>
@@ -39,14 +39,13 @@ include_once("../conexao.php");
 
         <?php
 
-$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING); // Correção: FILTER_SANITIZE_NUMBER_INT alterado para FILTER_SANITIZE_STRING para tratar como string
-
-// Utilizando prepared statement para evitar injeção de SQL
-$result_cliente = "SELECT cod, nome, cpf, rg FROM e1_cliente WHERE nome = ?"; // Correção: Adicionado o ? como marcador de posição para o valor do nome
-$stmt = mysqli_prepare($conn, $result_cliente); // Preparando a consulta
-mysqli_stmt_bind_param($stmt, "s", $nome); // Vinculando o valor do nome ao marcador de posição na consulta
-mysqli_stmt_execute($stmt); // Executando a consulta
-$resultado_cliente = mysqli_stmt_get_result($stmt); // Obtendo o resultado da consulta
+$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+// Utilizando prepared statement para evitar injeção de SQL/Preparando a consulta/Vinculando o valor do nome ao marcador de posição na consulta/Executando a consulta/ Obtendo o resultado da consulta
+$result_cliente = "SELECT cod, nome, cpf, rg FROM e1_cliente WHERE nome = ?";
+$stmt = mysqli_prepare($conn, $result_cliente);
+mysqli_stmt_bind_param($stmt, "s", $nome);
+mysqli_stmt_execute($stmt);
+$resultado_cliente = mysqli_stmt_get_result($stmt);
 
 if ($row_cliente = mysqli_fetch_assoc($resultado_cliente)) {
     echo "<h2>Informações do cliente</h2>";

@@ -14,8 +14,8 @@ include_once("../conexao.php");
     <style>
         .error-msg {
             color: red;
-            font-size: 27px; /* Tamanho da fonte aumentado novamente */
-            font-weight: bold; /* Deixando o texto em negrito */
+            font-size: 27px; 
+            font-weight: bold; 
         }
     </style>
 </head>
@@ -25,7 +25,7 @@ include_once("../conexao.php");
     <!-- Wrapper -->
     <div id="wrapper">
 
-        <!-- Adicionando botões no topo da página -->
+        <!-- Botões no topo da página -->
         <div id="top-buttons">
             <button onclick="window.location.href='../home.html'">Tela Inicial</button>
             <button onclick="window.location.href='automovel.html'">Voltar</button>
