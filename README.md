@@ -43,7 +43,7 @@ Here are the technologies used in this project.
 ![Login screen](https://github.com/Allanads/WebSite_Seguradora/blob/main/assets/Readme/login.png)
 
 
-![Homepage image2](https://github.com/Allanads/WebSite_Seguradora/blob/main/assets/Readme/screen_main2.png)
+
 
 
 ## Characteristics
