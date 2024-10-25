@@ -1,3 +1,7 @@
+Project WebSite Seguradora \o/
+
+Enjoy and I hope you like our project!
+
 ![main image of the project](https://github.com/Allanads/WebSite_Seguradora/blob/main/assets/Readme/screen_main.png)
 
 
