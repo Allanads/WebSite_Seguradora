@@ -1,6 +1,8 @@
-Project WebSite Seguradora \o/
-
+# Project WebSite Seguradora \o/
+<div align="center">
 Enjoy and I hope you like our project!
+</div>
+<br>
 
 ![main image of the project](https://github.com/Allanads/WebSite_Seguradora/blob/main/assets/Readme/screen_main.png)
 
