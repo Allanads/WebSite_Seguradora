@@ -38,54 +38,50 @@ include('conexao.php');
                         <br>
 
                         <?php
-if (isset($_POST['email']) && isset($_POST['senha'])) {
+                        // Verifica se o formulário foi enviado
+                        if (isset($_POST['email']) || isset($_POST['senha'])) {
 
-    if (strlen($_POST['email']) == 0) {
-        echo "Preencha seu e-mail";
-    } else if (strlen($_POST['senha']) == 0) {
-        echo "Preencha sua senha";
-    } else {
+                            // Verifica se o campo de email e senha estão vazios
+                            if (strlen($_POST['email']) == 0 || strlen($_POST['senha']) == 0) {
+                                echo "<div style='color: yellow; font-size: 18px; text-align: center;'>Preencha seu e-mail e senha para acessar</div>";
+                            } else {
+                                $email = $conn->real_escape_string($_POST['email']);
+                                $senha = $conn->real_escape_string($_POST['senha']);
 
-        // Recebe o e-mail e a senha enviados e escapa para evitar SQL Injection
-        $email = $conn->real_escape_string($_POST['email']);
-        $senha = $conn->real_escape_string($_POST['senha']);
+                                // Consulta para verificar o usuário no banco de dados
+                                $sql_code = "SELECT * FROM e0_usuario WHERE email = '$email' AND senha = '$senha'";
+                                $sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
+                                $quantidade = $sql_query->num_rows;
 
-        // Consulta o usuário com o e-mail e senha fornecidos
-        $sql_code = "SELECT * FROM e0_usuario WHERE email = '$email' AND senha = '$senha'";
-        $sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
-        $quantidade = $sql_query->num_rows;
+                                // Se o login for bem-sucedido
+                                if ($quantidade == 1) {
 
-        if ($quantidade == 1) { // Usuário encontrado
+                                    // Obtém os dados do usuário
+                                    $e0_usuario = $sql_query->fetch_assoc();
 
-            $e0_usuario = $sql_query->fetch_assoc();
+                                    // Armazena os dados do usuário na sessão
+                                    session_start();
+                                    $_SESSION['user'] = $e0_usuario['id'];
+                                    $_SESSION['nome'] = $e0_usuario['nome'];
 
-            if (!isset($_SESSION)) {
-                session_start();
-            }
+                                    // Verifica se é o e-mail do administrador para redirecionar
+                                    if (strtolower($email) === 'administrador@teste.com') {
+                                        header("Location: usuario/usuario.html");
+                                        exit(); // Importante para garantir que o script pare após o redirecionamento
+                                    } else {
+                                        header("Location: home.html");
+                                        exit(); // Importante para garantir que o script pare após o redirecionamento
+                                    }
 
-            $_SESSION['user'] = $e0_usuario['id'];
-            $_SESSION['nome'] = $e0_usuario['nome'];
+                                } else {
+                                    // Mensagem de erro caso o login falhe
+                                    echo "<strong><span style='color: red; font-size: 18px;'>Falha ao Logar! E-mail ou senha incorretos</span></strong><br><br>";
+                                }
+                            }
+                        }
+                        ?>
 
-            // Verifica se é o e-mail do administrador para redirecionar
-            if (strtolower($email) === 'administrador@teste.com') {
-                header("Location: usuario/usuario.html");
-                exit;
-            } else {
-                header("Location: home.html");
-                exit;
-            }
-
-        } else {
-            echo "<strong><span style='color: red; font-size: 18px;'>Falha ao Logar! E-mail ou senha incorretos</span></strong><br><br>";
-        }
-    }
-}
-?>
-
-
-
-
-
+                        <br>
 
                         <form action="" method="POST">
                             <p>
