@@ -106,7 +106,7 @@ include('conexao.php');
                                         background-color: #03619e;
                                     }
                                 </style>
-                                <center><button type="button" class="botao-azul-claro" onclick="location.href='usuario/usuario.html';">ESQUECI MINHA SENHA</button></center>
+                                <center><button type="button" class="botao-azul-claro" onclick="location.href='usuario/usu_esqueci.php';">ESQUECI MINHA SENHA</button></center>
                             </p>
                         </form>
 
