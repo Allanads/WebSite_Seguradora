@@ -24,7 +24,6 @@ include('conexao.php');
     <nav id="menu">
         <ul class="links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="usuario/usuario.html">Gerenciamento de Usuário</a></li>
         </ul>
     </nav>
 
