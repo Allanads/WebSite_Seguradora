@@ -39,39 +39,54 @@ include('conexao.php');
                         <br>
 
                         <?php
-                        if (isset($_POST['email']) || isset($_POST['senha'])) {
+if (isset($_POST['email']) && isset($_POST['senha'])) {
 
-                            if (strlen($_POST['email']) == 0) {
-                                echo "Preencha seu e-mail";
-                            } else if (strlen($_POST['senha']) == 0) {
-                                echo "Preencha sua senha";
-                            } else {
+    if (strlen($_POST['email']) == 0) {
+        echo "Preencha seu e-mail";
+    } else if (strlen($_POST['senha']) == 0) {
+        echo "Preencha sua senha";
+    } else {
 
-                                $email = $conn->real_escape_string($_POST['email']);
-                                $senha = $conn->real_escape_string($_POST['senha']);
+        // Recebe o e-mail e a senha enviados e escapa para evitar SQL Injection
+        $email = $conn->real_escape_string($_POST['email']);
+        $senha = $conn->real_escape_string($_POST['senha']);
 
-                                $sql_code = "SELECT * FROM e0_usuario WHERE email = '$email' AND senha = '$senha'";
-                                $sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
-                                $quantidade = $sql_query->num_rows;
+        // Consulta o usuário com o e-mail e senha fornecidos
+        $sql_code = "SELECT * FROM e0_usuario WHERE email = '$email' AND senha = '$senha'";
+        $sql_query = $conn->query($sql_code) or die("Falha na execução do código SQL: " . $conn->error);
+        $quantidade = $sql_query->num_rows;
 
-                                if ($quantidade == 1) {
+        if ($quantidade == 1) { // Usuário encontrado
 
-                                    $e0_usuario = $sql_query->fetch_assoc();
+            $e0_usuario = $sql_query->fetch_assoc();
 
-                                    if (!isset($_SESSION)) {
-                                        session_start();
-                                    }
+            if (!isset($_SESSION)) {
+                session_start();
+            }
 
-                                    $_SESSION['user'] = $e0_usuario['id'];
-                                    $_SESSION['nome'] = $e0_usuario['nome'];
+            $_SESSION['user'] = $e0_usuario['id'];
+            $_SESSION['nome'] = $e0_usuario['nome'];
 
-                                    header("Location: home.html");
-                                } else {
-                                    echo "<strong><span style='color: red; font-size: 18px;'>Falha ao Logar! E-mail ou senha incorretos</span></strong><br><br>";
-                                }
-                            }
-                        }
-                        ?>
+            // Verifica se é o e-mail do administrador para redirecionar
+            if (strtolower($email) === 'administrador@teste.com') {
+                header("Location: usuario/usuario.html");
+                exit;
+            } else {
+                header("Location: home.html");
+                exit;
+            }
+
+        } else {
+            echo "<strong><span style='color: red; font-size: 18px;'>Falha ao Logar! E-mail ou senha incorretos</span></strong><br><br>";
+        }
+    }
+}
+?>
+
+
+
+
+
 
                         <form action="" method="POST">
                             <p>
@@ -96,7 +111,7 @@ include('conexao.php');
                                         background-color: #03619e;
                                     }
                                 </style>
-                                <center><button type="button" class="botao-azul-claro" onclick="location.href='usuario/usuario.html';">GERENCIAMENTO DE USUÁRIOS</button></center>
+                                <center><button type="button" class="botao-azul-claro" onclick="location.href='usuario/usuario.html';">ESQUECI MINHA SENHA</button></center>
                             </p>
                         </form>
 
