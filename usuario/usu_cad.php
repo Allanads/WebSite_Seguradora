@@ -65,18 +65,9 @@ session_start();
                                 <input type="submit" name="enviar" value="INCLUIR" style="background-color: #03ad61; color: white;">
                             </form>
 
-<<<<<<< HEAD
                             <a href="../login.php">
                                 <button type="button" style="background-color: #03619e; color: white; margin-top: 10px;">LOGIN</button>
                             </a>
-=======
-                            <!-- Botão de Login -->
-                            <a href="../login.php">
-                                <button type="button" style="background-color: #03619e; color: white; margin-top: 10px;">LOGIN</button>
-                            </a>
-
-                            <!-- Botão de Voltar para usuário.html -->
->>>>>>> 4167c07 (Reefactor: Up)
                             <a href="usuario.html">
                                 <button type="button" style="background-color: #808080; color: white; margin-top: 10px;">VOLTAR</button>
                             </a>

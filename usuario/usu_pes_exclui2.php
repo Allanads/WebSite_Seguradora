@@ -53,7 +53,7 @@ include_once("../conexao.php");
 
                                 <?php
                                 if ($row_usuario) {
-                                    echo "<h1><font color='green' size='+1'>Consta na nossa base de dados o usuário:</font></h1>";
+                                    echo "<h1><font color='yellow' size='+1'>Consta na nossa base de dados o usuário</font></h1>";
                                     
                                     echo "<label><strong>Nome:</strong></label>
                                     <span>" . $row_usuario['nome'] . "</span><br><br>";
@@ -67,17 +67,14 @@ include_once("../conexao.php");
                                     // Mostra o botão "Excluir" apenas se o usuário for encontrado
                                     echo "<input type='hidden' name='id_usuario' value='" . $row_usuario['id'] . "'>";
                                     echo "<label>Deseja excluir o usuário ? </label>";
-                                    echo "<button type='submit'>EXCLUIR</button>";
+                                    echo "<button type='submit' style='background-color: red; color: white;'>EXCLUIR</button>";
+
                                 } else {
                                     echo "<h2><font color='red' size='+2'>Usuário não existe!!!!!</font></h2>";
                                 }
                                 ?>
                             </form>
 
-<<<<<<< HEAD
-=======
-                            <!-- Botão de Voltar centralizado -->
->>>>>>> 4167c07 (Reefactor: Up)
                             <div style="text-align: center; margin-top: 5px;">
                                 <a href="usu_pes_exclui1.php">
                                     <label>Deseja fazer uma nova pesquisa?</label>

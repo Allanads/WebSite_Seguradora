@@ -68,10 +68,6 @@ include_once("../conexao.php");
 								?>
 							</form>
 
-<<<<<<< HEAD
-=======
-							<!-- Centralizando a mensagem e o botão de voltar -->
->>>>>>> 4167c07 (Reefactor: Up)
 							<div style="text-align: center; margin-top: 5px;">
 								<label>Deseja fazer uma nova pesquisa?</label>
 								<form action="usu_pes_usu1.php" style="display: inline;">

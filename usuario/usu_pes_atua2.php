@@ -66,17 +66,15 @@ include_once("../conexao.php");
 									echo "<label><strong>Senha:</strong></label>
 									<input name='senha' type='text' placeholder='".$row_usuario['senha']."' value='".$row_usuario['senha']."'><br></br>";
 
-									echo "<input type='submit' name='Atualiza' value='Atualiza'> ";
+									echo "<input type='submit' name='Atualiza' value='Atualiza' style='background-color: #03ad61; color: white;'> ";
+
+
 								} else {
 									echo "<h2><font color='red' size='+2'>Usuário não existe!!!!!</font></h2>";
 								}
 								?>
 							</form>
 
-<<<<<<< HEAD
-=======
-							<!-- Botão de Voltar centralizado -->
->>>>>>> 4167c07 (Reefactor: Up)
 							<div style="text-align: center; margin-top: 5px;">
 								<a href="usu_pes_atua1.php">
 									<label>Deseja fazer uma nova pesquisa?</label>
