@@ -18,10 +18,10 @@ include_once("../conexao.php");
     <!-- Header -->
 
     <header id="header" class="alt">
-        <div class="logo"><a href="index.html">WebSite <span>by ATK
-                    Company</span></a></div>
+        <div class="logo"><a href="index.html">WebSite <span>by ATK Company</span></a></div>
         <a href="#menu"><span>Menu</span></a>
     </header>
+
     <!-- Nav -->
     <nav id="menu">
         <ul class="links">
@@ -50,7 +50,6 @@ include_once("../conexao.php");
                             $row_usuario = mysqli_fetch_assoc($resultado_usuario);
                             ?>
                             <form method="POST" action="usu_exclui.php">
-
                                 <?php
                                 if ($row_usuario) {
                                     echo "<h1><font color='yellow' size='+1'>Consta na nossa base de dados o usuário</font></h1>";
@@ -64,11 +63,16 @@ include_once("../conexao.php");
                                     echo "<label><strong>Senha:</strong></label>
                                     <span>" . $row_usuario['senha'] . "</span><br><br><br>";
                                     
-                                    // Mostra o botão "Excluir" apenas se o usuário for encontrado
                                     echo "<input type='hidden' name='id_usuario' value='" . $row_usuario['id'] . "'>";
-                                    echo "<label>Deseja excluir o usuário ? </label>";
-                                    echo "<button type='submit' style='background-color: red; color: white;'>EXCLUIR</button>";
 
+                                    // Verifica se o email não é do administrador
+                                    if ($row_usuario['email'] !== 'administrador@teste.com') {
+                                        echo "<label>Deseja excluir o usuário ? </label>";
+                                        echo "<button type='submit' style='background-color: red; color: white;'>EXCLUIR</button>";
+                                    } else {
+                                        // Exibe mensagem se o usuário for o administrador
+                                        echo "<h2><font color='yellow' size='+2'>Usuário não pode ser excluído</font></h2>";
+                                    }
                                 } else {
                                     echo "<h2><font color='red' size='+2'>Usuário não existe!!!!!</font></h2>";
                                 }
@@ -90,8 +94,9 @@ include_once("../conexao.php");
 </div>
 </section>
 <div class="copyright">
-    WebSite <a>By Company ATK</a>
+    WebSite <a>By Allan</a>
 </div>
+
 <!-- Scripts -->
 <script src="../assets/js/jquery.min.js"></script>
 <script src="../assets/js/jquery.scrolly.min.js"></script>

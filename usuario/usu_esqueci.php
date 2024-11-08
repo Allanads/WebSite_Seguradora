@@ -41,14 +41,14 @@ session_start();
 
                             <div class="form-container">
                                 <form method="post" name="consultar_usuario"
-                                    action="usu_pes_usu2.php">
+                                    action="usu_pes_senha.php">
                                     <label><strong>E-mail:</strong></label>
                                     <input type="email" name="email"
                                         maxlength="140" required
                                         placeholder="Digite seu E-mail">
 										<br>
 
-                                        <input type="submit" name="enviar" value="Enviar" style="background-color: #03ad61; color: white;">
+                                        <input type="submit" name="Visualizar" value="Senha" style="background-color: #03ad61; color: white;">
                                 
                                 </form>
                                 <a href="../login.php"><button>Voltar</button></a>
