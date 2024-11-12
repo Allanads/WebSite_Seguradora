@@ -48,7 +48,7 @@ session_start();
                                         placeholder="Digite seu E-mail">
 										<br>
 
-                                        <input type="submit" name="Visualizar" value="Senha" style="background-color: #03ad61; color: white;">
+                                        <input type="submit" name="Visualizar" value="Consultar" style="background-color: #03ad61; color: white;">
                                 
                                 </form>
                                 <a href="../login.php"><button>Voltar</button></a>
