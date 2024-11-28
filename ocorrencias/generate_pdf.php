@@ -46,7 +46,6 @@ include_once("../conexao.php");
         <br>
 
         <?php
-        // Consulta SQL para obter todas as ocorrências/Consulta SQL para obter as informações da ocorrência/Verifica se a consulta retornou algum resultado/Loop através de todas as ocorrências encontradas
         global $conn;
         $sql_ocorrencia = "SELECT o.COD AS cod_ocorrencia, o.DATA_OCORRENCIA, o.LOCAL_OCORRENCIA, o.DESCRICAO_OCORRENCIA, v.cod AS cod_veiculo, v.placa, v.renavan, v.fabricante AS fabricante_veiculo, v.modelo AS modelo_veiculo, v.ano AS ano_veiculo, c.cod AS cod_cliente, c.nome, c.cpf, c.rg
                                 FROM e3_ocorrencias o

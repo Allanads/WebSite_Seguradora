@@ -50,12 +50,10 @@ session_start();
                                 <input type="submit" name="enviar" value="Consultar" style="background-color: #03ad61; color: white;">
                             </form>
 
-                            <!-- Botão azul para consultar todos os usuários -->
                             <form action="usu_pes_usu3.php" method="GET" style="text-align: center; margin-top: 15px;">
                                 <button type="submit" style="background-color: #007bff; color: white;">Todos usuários</button>
                             </form>
 
-                            <!-- Botão de Voltar -->
                             <a href="usuario.html"><button>Voltar</button></a>
                         </div>
                     </center>

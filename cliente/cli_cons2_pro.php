@@ -40,7 +40,6 @@ include_once("../conexao.php");
         <?php
 
 $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-// Utilizando prepared statement para evitar injeção de SQL/Preparando a consulta/Vinculando o valor do nome ao marcador de posição na consulta/Executando a consulta/ Obtendo o resultado da consulta
 $result_cliente = "SELECT cod, nome, cpf, rg FROM e1_cliente WHERE nome = ?";
 $stmt = mysqli_prepare($conn, $result_cliente);
 mysqli_stmt_bind_param($stmt, "s", $nome);

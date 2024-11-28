@@ -67,10 +67,10 @@ include('conexao.php');
                                     // Verifica se é o e-mail do administrador para redirecionar
                                     if (strtolower($email) === 'administrador@teste.com') {
                                         header("Location: usuario/usuario.html");
-                                        exit(); // Importante para garantir que o script pare após o redirecionamento
+                                        exit();
                                     } else {
                                         header("Location: home.html");
-                                        exit(); // Importante para garantir que o script pare após o redirecionamento
+                                        exit();
                                     }
 
                                 } else {
